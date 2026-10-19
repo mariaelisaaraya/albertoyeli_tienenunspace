@@ -2,20 +2,31 @@
 import { withBase } from "../lib/url";
 ---
 
-<section class="mx-auto my-16 max-w-5xl px-4 sm:px-6">
-  <div class="relative overflow-hidden rounded-doodle border-2 border-ink bg-coral-soft px-6 py-10 text-center sm:px-10 sm:py-14">
-    <div class="absolute -right-6 -top-6 h-24 w-24 rotate-12 rounded-doodle border-2 border-ink bg-sun" aria-hidden="true"></div>
-    <div class="absolute -bottom-8 -left-8 h-28 w-28 -rotate-6 rounded-doodle border-2 border-ink bg-mint" aria-hidden="true"></div>
+<section class="mx-auto my-20 max-w-5xl px-4 sm:px-6">
+  <div class="relative overflow-hidden rounded-[2.5rem] border-[3px] border-ink bg-ink px-6 py-14 text-center text-paper sm:px-10">
+    <div
+      class="pointer-events-none absolute inset-0 opacity-[0.08]"
+      style="background-image: radial-gradient(var(--color-paper) 1px, transparent 1px); background-size: 18px 18px;"
+      aria-hidden="true"
+    >
+    </div>
 
-    <h2 class="relative font-display text-3xl font-extrabold text-ink sm:text-4xl">
-      ¿Tenés algo interesante para contar?
+    <svg class="relative mx-auto mb-4 h-14 w-14 text-mint" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <rect x="18" y="4" width="12" height="24" rx="6" stroke="currentColor" stroke-width="2.5" />
+      <path d="M10 22c0 8 6 14 14 14s14-6 14-14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="24" y1="36" x2="24" y2="44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="16" y1="44" x2="32" y2="44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+    </svg>
+
+    <h2 class="relative font-display text-3xl leading-tight sm:text-5xl">
+      Este micrófono también puede ser tuyo
     </h2>
-    <p class="relative mx-auto mt-3 max-w-md text-ink-soft">
-      Vení a charlar con nosotros.
+    <p class="relative mx-auto mt-3 max-w-md text-paper/70">
+      ¿Tenés algo interesante para contar? Vení a charlar con nosotros.
     </p>
     <a
       href={withBase("/participa")}
-      class="focus-ring relative mt-6 inline-block rounded-full border-2 border-ink bg-ink px-7 py-3 font-display font-bold text-paper shadow-doodle transition hover:-translate-y-0.5"
+      class="focus-ring sticker relative mt-7 inline-block border-[3px] border-ink bg-sun px-8 py-3.5 font-display text-sm text-ink shadow-doodle transition hover:-translate-y-0.5"
     >
       Postulate para participar
     </a>

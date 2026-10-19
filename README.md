@@ -29,14 +29,14 @@ npm run check     # chequeo de tipos de Astro/TS
 
 ## Deploy en GitHub Pages
 
-1. Creá el repo en GitHub (ej. `albertoyeli`) y pusheá este proyecto.
+1. El sitio se publica en [`mariaelisaaraya/albertoyeli_tienenunspace`](https://github.com/mariaelisaaraya/albertoyeli_tienenunspace).
 2. En **Settings → Pages**, elegí "GitHub Actions" como fuente.
 3. Editá `astro.config.mjs` con tus valores reales:
 
    ```js
    // Repo de proyecto: https://<usuario>.github.io/<repo>/
-   const site = "https://TU-USUARIO.github.io";
-   const base = "/albertoyeli";
+   const site = "https://mariaelisaaraya.github.io";
+   const base = "/albertoyeli_tienenunspace";
 
    // Dominio propio o Pages de usuario/org (https://tu-dominio/):
    // const site = "https://tu-dominio.com";
@@ -54,19 +54,12 @@ npm run check     # chequeo de tipos de Astro/TS
    cuenta regresiva del próximo Space y el `.ics` no queden desactualizados
    (son estáticos, calculados en build time).
 
-## Contenido pendiente de revisión
+## Contribuciones
 
-Antes de considerar esto publicable de verdad:
-
-- **Episodios reales**: el archivo (`src/content/episodes/`) está vacío a
-  propósito — no inventé los ~4 episodios ya grabados porque no pude
-  verificar sus títulos/fechas/contenido de forma confiable. Usá
-  `npm run new-episode` (ver abajo) para cargarlos con los datos reales.
-- **Imagen "Edo y Fran"**: el brief menciona una segunda imagen de referencia
-  de diseño que todavía no se compartió.
-- **Formspree**: el formulario de `/participa` funciona, pero necesita que
-  crees una cuenta gratuita en [formspree.io](https://formspree.io) (no lo
-  hice por vos: es una cuenta de terceros) y configures el ID — ver abajo.
+¡Las contribuciones son más que bienvenidas! Si encontrás un error, querés
+mejorar el sitio o sumar una idea, abrí un issue o enviá un pull request. Para
+cambios grandes, podés abrir primero un issue y lo conversamos. Gracias por
+ayudar a que AlbertoYEli siga creciendo.
 
 ## Agregar un episodio
 
@@ -103,7 +96,7 @@ links:
     url: "https://..."
 highlights:
   - "Una idea destacada."
-transcriptStatus: "pending" # pending | auto | reviewed
+transcriptStatus: "pending" # pending | auto | reviewed | not_applicable (si no hubo charla)
 transcriptId: "episodio-5" # opcional, ver abajo
 draft: false
 ---

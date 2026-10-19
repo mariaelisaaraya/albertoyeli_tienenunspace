@@ -10,27 +10,36 @@ const navLinks = [
 const path = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-40 border-b-2 border-ink/10 bg-sky/90 backdrop-blur">
+<header class="sticky top-0 z-40 border-b-[3px] border-ink bg-paper/90 backdrop-blur">
   <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
     <a href={withBase("/")} class="focus-ring flex items-center gap-2 rounded-full">
-      <span class="font-display text-xl font-bold tracking-tight text-ink sm:text-2xl">
+      <span class="font-display text-xl tracking-tight text-ink sm:text-2xl">
         Alberto<span class="text-coral">Y</span>Eli
       </span>
     </a>
 
-    <nav aria-label="Principal" class="hidden items-center gap-1 sm:flex">
+    <nav aria-label="Principal" class="hidden items-center gap-1 font-label sm:flex">
       {
         navLinks.map((link) => (
           <a
             href={link.href}
             aria-current={path === link.href ? "page" : undefined}
-            class="focus-ring rounded-full px-3 py-2 font-medium text-ink-soft transition hover:bg-sky-deep hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper"
+            class="focus-ring rounded-full px-3 py-2 font-semibold text-ink-soft transition hover:bg-sky-deep hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper"
           >
             {link.label}
           </a>
         ))
       }
     </nav>
+
+    <label class="shrink-0" translate="no">
+      <span class="sr-only">Español / English / Português</span>
+      <select id="site-language" aria-label="Español / English / Português" class="focus-ring rounded-full border-2 border-ink bg-paper px-2 py-1.5 font-label text-sm font-bold text-ink">
+        <option value="es" lang="es">ES</option>
+        <option value="en" lang="en">EN</option>
+        <option value="pt" lang="pt">PT</option>
+      </select>
+    </label>
 
     <details class="relative sm:hidden">
       <summary

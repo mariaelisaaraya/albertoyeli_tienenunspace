@@ -1,6 +1,6 @@
 import type { NextSpace } from "./time";
 
-const DEFAULT_DURATION_MS = 60 * 60 * 1000; // 1 hora
+export const DEFAULT_DURATION_MS = 60 * 60 * 1000; // 1 hora
 
 function toUtcBasic(date: Date): string {
   return date.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
@@ -11,17 +11,17 @@ function toUtcBasic(date: Date): string {
  * Space (no una serie recurrente), para evitar que alguien agende un
  * evento distinto al realmente anunciado.
  */
-export function buildGoogleCalendarUrl(next: NextSpace): string {
+export function buildGoogleCalendarUrl(next: Pick<NextSpace, "instant" | "confirmed">): string {
   const start = next.instant;
   const end = new Date(start.getTime() + DEFAULT_DURATION_MS);
 
   const params = new URLSearchParams({
     action: "TEMPLATE",
-    text: "AlbertoYEli — X Space",
+    text: next.confirmed?.title ?? "AlbertoYEli — X Space",
     dates: `${toUtcBasic(start)}/${toUtcBasic(end)}`,
     details:
       (next.confirmed?.spaceUrl ? `Space: ${next.confirmed.spaceUrl}\n\n` : "") +
-      "Conversación semanal de AlbertoYEli en X Spaces.",
+      (next.confirmed?.description ?? "Conversación semanal de AlbertoYEli en X Spaces."),
     location: next.confirmed?.spaceUrl ?? "https://x.com/i/spaces",
   });
 

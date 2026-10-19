@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useTranslationReady } from "../lib/useTranslationReady";
+import { useEffect, useMemo, useState } from "react";
 
 export interface TranscriptSegment {
   speaker?: string;
@@ -8,7 +9,7 @@ export interface TranscriptSegment {
 
 interface Props {
   segments: TranscriptSegment[];
-  status: "pending" | "auto" | "reviewed";
+  status: "pending" | "auto" | "reviewed" | "not_applicable";
   hasAudio: boolean;
 }
 
@@ -23,6 +24,14 @@ function normalize(value: string) {
     .toLowerCase()
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "");
+}
+
+function seekAudio(seconds: number) {
+  const audio = document.getElementById("episode-audio");
+  if (!(audio instanceof HTMLAudioElement) || audio.readyState === 0) return;
+  audio.currentTime = Number.isFinite(audio.duration)
+    ? Math.min(seconds, audio.duration)
+    : seconds;
 }
 
 function highlight(text: string, query: string) {
@@ -41,8 +50,30 @@ function highlight(text: string, query: string) {
 }
 
 export default function TranscriptViewer({ segments, status, hasAudio }: Props) {
+  const languageRoot = useTranslationReady();
   const [query, setQuery] = useState("");
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!hasAudio) return;
+    const audio = document.getElementById("episode-audio");
+    if (!(audio instanceof HTMLAudioElement)) return;
+
+    function seekFromHash() {
+      const match = /^#t=(\d+(?:\.\d+)?)$/.exec(window.location.hash);
+      if (!match) return;
+      const seconds = Number(match[1]);
+      if (Number.isFinite(seconds)) seekAudio(seconds);
+    }
+
+    seekFromHash();
+    window.addEventListener("hashchange", seekFromHash);
+    audio.addEventListener("loadedmetadata", seekFromHash);
+    return () => {
+      window.removeEventListener("hashchange", seekFromHash);
+      audio.removeEventListener("loadedmetadata", seekFromHash);
+    };
+  }, [hasAudio]);
 
   const filtered = useMemo(() => {
     if (!query.trim()) return segments.map((seg, i) => ({ seg, i }));
@@ -61,16 +92,18 @@ export default function TranscriptViewer({ segments, status, hasAudio }: Props) 
     }
   }
 
+  if (status === "not_applicable") return null;
+
   const statusLabel =
     status === "reviewed"
       ? "Transcripción revisada por el equipo"
       : status === "auto"
-        ? "Transcripción generada automáticamente — puede tener errores"
+        ? "Transcripción generada automáticamente, puede tener errores"
         : "Transcripción pendiente";
 
   if (segments.length === 0) {
     return (
-      <div className="rounded-doodle border-2 border-dashed border-ink/30 bg-paper/60 px-6 py-10 text-center">
+      <div ref={languageRoot} className="rounded-doodle border-2 border-dashed border-ink/30 bg-paper/60 px-6 py-10 text-center">
         <p className="font-display text-lg font-bold text-ink">Transcripción pendiente</p>
         <p className="mt-2 text-sm text-ink-soft">
           Todavía no publicamos la transcripción de este episodio. Volvé pronto.
@@ -80,7 +113,7 @@ export default function TranscriptViewer({ segments, status, hasAudio }: Props) 
   }
 
   return (
-    <div>
+    <div ref={languageRoot}>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span
           className={`rounded-full border-2 border-ink px-3 py-1 text-xs font-bold ${
@@ -108,7 +141,11 @@ export default function TranscriptViewer({ segments, status, hasAudio }: Props) 
               {seg.timestamp !== undefined && (
                 hasAudio ? (
                   <a
-                    href={`#t=${Math.floor(seg.timestamp)}`}
+                    href={`#t=${seg.timestamp}`}
+                    aria-label={`Ir al minuto ${formatTimestamp(seg.timestamp)} del audio`}
+                    onClick={() => {
+                      if (seg.timestamp !== undefined) seekAudio(seg.timestamp);
+                    }}
                     className="focus-ring rounded font-mono text-xs font-semibold text-ink-soft hover:text-coral"
                   >
                     {formatTimestamp(seg.timestamp)}
@@ -124,7 +161,7 @@ export default function TranscriptViewer({ segments, status, hasAudio }: Props) 
               {seg.speaker && (
                 <p className="text-xs font-bold uppercase tracking-wide text-coral">{seg.speaker}</p>
               )}
-              <p className="text-ink-soft">{highlight(seg.text, query)}</p>
+              <p lang="es" translate="no" className="text-ink-soft">{highlight(seg.text, query)}</p>
             </div>
             <button
               type="button"

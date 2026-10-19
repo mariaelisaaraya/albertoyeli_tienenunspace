@@ -29,7 +29,7 @@ const fullTitle = title === "AlbertoYEli" ? title : `${title} · AlbertoYEli`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
+    <link id="site-favicon" rel="icon" type="image/png" href={withBase("/images/eli-portrait.png")} data-eli={withBase("/images/eli-portrait.png")} data-alberto={withBase("/images/alberto-portrait.png")} />
     <meta name="generator" content={Astro.generator} />
 
     <title>{fullTitle}</title>
@@ -52,13 +52,25 @@ const fullTitle = title === "AlbertoYEli" ? title : `${title} · AlbertoYEli`;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="alternate" type="application/rss+xml" title="AlbertoYEli" href={withBase("/rss.xml")} />
   </head>
   <body class="flex min-h-screen flex-col font-sans antialiased">
+    <script>
+      import "../lib/language-switcher";
+      const favicon = document.querySelector<HTMLLinkElement>("#site-favicon");
+      if (favicon && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const portraits = [favicon.dataset.eli!, favicon.dataset.alberto!];
+        let index = 0;
+        window.setInterval(() => {
+          index = (index + 1) % portraits.length;
+          favicon.href = portraits[index];
+        }, 4000);
+      }
+    </script>
     <a
       href="#contenido"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"

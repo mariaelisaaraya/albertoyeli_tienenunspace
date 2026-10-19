@@ -1,0 +1,34 @@
+---
+import { fromZonedTime } from "date-fns-tz";
+import { confirmedSpaces, SHOW_TIMEZONE } from "../data/schedule";
+import { buildGoogleCalendarUrl } from "../lib/calendar";
+
+const calendarUrl = buildGoogleCalendarUrl({
+  instant: fromZonedTime("2026-10-30T13:00:00", SHOW_TIMEZONE),
+  confirmed: confirmedSpaces.find((space) => space.date === "2026-10-30"),
+});
+const formatDate = (date: string) =>
+  new Intl.DateTimeFormat("es-AR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })
+    .format(new Date(`${date}T00:00:00Z`));
+const notices = [
+  { date: "2026-10-30", label: "006", icon: "🗓️", title: "¿Juntos cara a cara?", text: "Volvemos el 30/10. Puede ser, puede no ser… El cara a cara está por confirmar. ¡Guardá la fecha!", upcoming: true },
+  { date: "2026-10-23", label: "S/E", icon: "✈️", title: "Alberto estuvo en Lisboa", text: "Sin episodio esta semana.", upcoming: false },
+  { date: "2026-10-16", label: "S/E", icon: "🍁", title: "Alberto estuvo en Canadá", text: "Sin episodio esta semana.", upcoming: false },
+];
+---
+
+<ul class="mt-8">
+  {notices.map((notice) => (
+    <li class="flex flex-col gap-4 border-b-2 border-dashed border-ink/20 py-8 sm:flex-row sm:items-start">
+      <span class="shrink-0 font-display text-[3.5rem] leading-none text-ink/20 sm:w-36" aria-label={notice.upcoming ? "Próximo episodio 6" : "Sin episodio"}>{notice.label}</span>
+      <div class="min-w-0 flex-1">
+        <time datetime={notice.date} class="font-label text-xs font-bold tracking-widest text-coral">{formatDate(notice.date)}</time>
+        <h2 class="mt-2 font-display text-2xl text-ink"><span aria-hidden="true">{notice.icon}</span> {notice.title}</h2>
+        <p class="mt-3 text-ink-soft">{notice.text}</p>
+        {notice.upcoming && (
+          <a href={calendarUrl} target="_blank" rel="noopener noreferrer" class="focus-ring mt-4 inline-block rounded-full border-2 border-ink bg-mint px-5 py-2.5 font-display text-sm text-ink">Agendar el 30 de octubre</a>
+        )}
+      </div>
+    </li>
+  ))}
+</ul>

@@ -5,21 +5,29 @@ import { withBase } from "../lib/url";
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t-2 border-ink/10 bg-paper">
-  <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-    <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+<footer class="border-t-[3px] border-ink bg-ink text-paper">
+  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
       <div>
-        <p class="font-display text-lg font-bold text-ink">AlbertoYEli</p>
-        <p class="mt-1 max-w-xs text-sm text-ink-soft">
-          Conversaciones semanales en X Spaces. Todos los viernes, 13:00 Argentina · 10:00 Costa Rica.
+        <p class="font-display text-2xl">
+          Alberto<span class="text-coral">Y</span>Eli
+        </p>
+        <p class="mt-2 max-w-xs text-sm text-paper/60">
+          Conversaciones semanales en X Spaces. Todos los viernes, 13:00 Argentina · 10:00 Costa
+          Rica.
         </p>
       </div>
 
       <div class="flex flex-col gap-1 text-sm">
-        <span class="font-semibold text-ink">Conducen</span>
+        <span class="font-label font-bold uppercase tracking-wide text-mint">Conducen</span>
         {
           hosts.map((host) => (
-            <a href={host.xUrl} target="_blank" rel="noopener noreferrer" class="focus-ring rounded text-ink-soft hover:text-coral">
+            <a
+              href={host.xUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="focus-ring rounded text-paper/70 hover:text-coral"
+            >
               {host.name} · {host.xHandle}
             </a>
           ))
@@ -27,13 +35,19 @@ const year = new Date().getFullYear();
       </div>
 
       <nav aria-label="Pie de página" class="flex flex-col gap-1 text-sm">
-        <a href={withBase("/episodios")} class="focus-ring rounded text-ink-soft hover:text-coral">Episodios</a>
-        <a href={withBase("/participa")} class="focus-ring rounded text-ink-soft hover:text-coral">Participá</a>
-        <a href={withBase("/rss.xml")} class="focus-ring rounded text-ink-soft hover:text-coral">RSS</a>
+        <a href={withBase("/episodios")} class="focus-ring rounded text-paper/70 hover:text-coral">
+          Episodios
+        </a>
+        <a href={withBase("/participa")} class="focus-ring rounded text-paper/70 hover:text-coral">
+          Participá
+        </a>
+        <a href={withBase("/rss.xml")} class="focus-ring rounded text-paper/70 hover:text-coral">
+          RSS
+        </a>
       </nav>
     </div>
 
-    <p class="mt-8 text-xs text-ink-soft/80">
+    <p class="mt-10 font-label text-xs text-paper/40">
       © {year} AlbertoYEli. Hecho con curiosidad, café y viernes a la tarde.
     </p>
   </div>

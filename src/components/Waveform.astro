@@ -1,0 +1,22 @@
+---
+interface Props {
+  bars?: number;
+  class?: string;
+  color?: string;
+}
+
+const { bars = 9, class: className = "", color = "currentColor" } = Astro.props;
+const heights = Array.from({ length: bars }, (_, i) => 30 + ((i * 37) % 70));
+const delays = Array.from({ length: bars }, (_, i) => (i * 0.09).toFixed(2));
+---
+
+<div class={`flex h-8 items-end gap-[3px] ${className}`} aria-hidden="true">
+  {
+    heights.map((h, i) => (
+      <span
+        class="eq-bar w-[4px] rounded-full"
+        style={`height:${h}%; background:${color}; animation-delay:${delays[i]}s`}
+      />
+    ))
+  }
+</div>

@@ -4,10 +4,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import NextSpaceSection from "../components/NextSpaceSection.astro";
 import EpisodeCard from "../components/EpisodeCard.astro";
+import ArchiveNotices from "../components/ArchiveNotices.astro";
 import EmptyState from "../components/EmptyState.astro";
 import CTASection from "../components/CTASection.astro";
 import DriverCard from "../components/DriverCard.astro";
+import Squiggle from "../components/Squiggle.astro";
 import { hosts } from "../data/hosts";
+import { withBase } from "../lib/url";
 
 const allEpisodes = (await getCollection("episodes")).filter((e) => !e.data.draft);
 const latest = allEpisodes
@@ -22,40 +25,43 @@ const latest = allEpisodes
     <NextSpaceSection />
   </section>
 
-  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
     <div class="flex items-end justify-between gap-4">
-      <h2 class="font-display text-3xl font-extrabold text-ink">Últimos episodios</h2>
-      <a href="/episodios" class="focus-ring hidden rounded font-bold text-ink hover:text-coral sm:block">
+      <h2 class="font-display text-3xl text-ink sm:text-4xl">Últimos episodios</h2>
+      <a href={withBase("/episodios")} class="focus-ring hidden rounded font-display text-sm text-ink hover:text-coral sm:block">
         Ver todo el archivo →
       </a>
     </div>
+    <Squiggle class="mt-3 max-w-[10rem] text-ink/20" />
+    <ArchiveNotices />
 
     {
       latest.length === 0 ? (
-        <div class="mt-8">
+        <div class="mt-10">
           <EmptyState
             title="Todavía no publicamos episodios acá"
-            description="Ya grabamos varios Spaces — estamos preparando las transcripciones y resúmenes antes de subirlos. Volvé pronto."
+            description="Ya grabamos varios Spaces. Estamos preparando las transcripciones y resúmenes antes de subirlos. Volvé pronto."
           />
         </div>
       ) : (
-        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {latest.map((episode) => <EpisodeCard episode={episode} />)}
+        <div class="mt-4">
+          {latest.map((episode, i) => <EpisodeCard episode={episode} index={i} />)}
         </div>
       )
     }
 
-    <a href="/episodios" class="focus-ring mt-8 block text-center font-bold text-ink hover:text-coral sm:hidden">
+    <a href={withBase("/episodios")} class="focus-ring mt-4 block text-center font-display text-sm text-ink hover:text-coral sm:hidden">
       Ver todo el archivo →
     </a>
   </section>
 
   <CTASection />
 
-  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-    <h2 class="font-display text-3xl font-extrabold text-ink">Conducen</h2>
-    <div class="mt-8 grid gap-6 sm:grid-cols-2">
-      {hosts.map((host) => <DriverCard host={host} />)}
+  <section id="conducen" class="mx-auto max-w-5xl scroll-mt-20 px-4 py-20 sm:px-6">
+    <h2 class="font-display text-3xl text-ink sm:text-4xl">Conducen</h2>
+    <Squiggle class="mt-3 max-w-[10rem] text-ink/20" />
+    <div class="mt-12 flex flex-col gap-14">
+      {hosts.map((host, i) => <DriverCard host={host} reverse={i % 2 === 1} />)}
     </div>
   </section>
 </BaseLayout>

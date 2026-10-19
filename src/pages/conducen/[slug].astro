@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { hosts } from "../../data/hosts";
+import { withBase } from "../../lib/url";
+
+export function getStaticPaths() {
+  return hosts.map((host) => ({ params: { slug: host.slug }, props: { host } }));
+}
+
+const { host } = Astro.props;
+const other = hosts.find((h) => h.slug !== host.slug);
+---
+
+<BaseLayout title={host.name} description={host.shortBio}>
+  <article class="mx-auto max-w-2xl px-4 py-14 sm:px-6">
+    <a href={withBase("/#conducen")} class="focus-ring font-label text-sm font-bold text-ink-soft hover:text-coral">
+      ← Conducen
+    </a>
+
+    <div class="mt-4 flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
+      <div class="relative w-40 shrink-0">
+        <div class="absolute -inset-3 -z-10 -rotate-6 rounded-full bg-sky-deep" aria-hidden="true"></div>
+        <img
+          src={withBase(host.portrait)}
+          alt={`Retrato ilustrado de ${host.name}`}
+          width="200"
+          height="200"
+          class="w-full rounded-full border-[3px] border-ink object-cover"
+        />
+      </div>
+      <div>
+        <h1 class="font-display text-5xl text-ink">{host.name}</h1>
+        <p class="mt-1 font-label text-sm font-bold uppercase tracking-widest text-coral">
+          {host.role} · {host.location}
+        </p>
+        <div class="mt-3 flex flex-wrap justify-center gap-3 sm:justify-start">
+          <a
+            href={host.xUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="focus-ring rounded-full border-2 border-ink bg-sky-deep px-3 py-1 font-label text-sm font-bold text-ink hover:bg-sun"
+          >
+            {host.xHandle}
+          </a>
+          <a
+            href={host.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="focus-ring rounded-full border-2 border-ink px-3 py-1 font-label text-sm font-bold text-ink hover:bg-sky-deep"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="editorial-content mt-8 max-w-none text-ink-soft">
+      {host.fullBio.map((p) => <p>{p}</p>)}
+    </div>
+
+    {
+      other && (
+        <p class="mt-10 border-t-2 border-dashed border-ink/20 pt-6 text-sm text-ink-soft">
+          Conduce junto a{" "}
+          <a href={withBase(`/conducen/${other.slug}/`)} class="focus-ring font-bold text-ink underline decoration-coral decoration-2 underline-offset-4 hover:text-coral">
+            {other.name}
+          </a>
+          .
+        </p>
+      )
+    }
+  </article>
+</BaseLayout>

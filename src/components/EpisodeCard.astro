@@ -5,65 +5,99 @@ import { withBase } from "../lib/url";
 
 interface Props {
   episode: CollectionEntry<"episodes">;
+  index?: number;
 }
 
-const { episode } = Astro.props;
-const { number, title, date, summary, topics, durationMinutes, cover } = episode.data;
+const { episode, index = 0 } = Astro.props;
+const {
+  number,
+  title,
+  date,
+  dateIsApproximate,
+  dateIsUnknown,
+  summary,
+  topics,
+  durationMinutes,
+  cover,
+  audioStatus,
+  transcriptStatus,
+} = episode.data;
 
-const formattedDate = new Intl.DateTimeFormat("es-AR", {
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-  timeZone: "America/Argentina/Buenos_Aires",
-}).format(date);
+const formattedDate = dateIsUnknown
+  ? "Fecha sin confirmar"
+  : new Intl.DateTimeFormat("es-AR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC", // fecha de calendario pura, no un instante — no convertir de zona
+    }).format(date);
+
+const tones = ["bg-sky-deep", "bg-sun-soft", "bg-mint-soft", "bg-coral-soft"];
+const tone = tones[index % tones.length];
+const tilt = index % 2 === 0 ? "-rotate-1" : "rotate-1";
 ---
 
-<article class="group flex flex-col overflow-hidden rounded-doodle border-2 border-ink bg-paper shadow-doodle-sm transition hover:-translate-y-1 hover:shadow-doodle">
-  <a href={withBase(`/episodios/${episode.id}/`)} class="focus-ring block">
-    {
-      cover ? (
-        <Image
-          src={cover}
-          alt=""
-          width={640}
-          height={360}
-          class="aspect-video w-full border-b-2 border-ink object-cover"
-        />
-      ) : (
-        <div class="flex aspect-video w-full items-center justify-center border-b-2 border-ink bg-sky-deep">
-          <span class="font-display text-4xl font-extrabold text-ink/30">#{number}</span>
-        </div>
-      )
-    }
+<article
+  class={`group relative flex flex-col gap-4 border-b-2 border-dashed border-ink/20 py-8 sm:flex-row sm:items-start first:pt-0 last:border-none`}
+>
+  <a
+    href={withBase(`/episodios/${episode.id}/`)}
+    class={`focus-ring font-display shrink-0 select-none text-[3.5rem] leading-none text-ink/15 transition group-hover:text-coral sm:text-[4.5rem] ${tilt}`}
+    aria-hidden="true"
+  >
+    {String(number).padStart(3, "0")}
   </a>
-  <div class="flex flex-1 flex-col p-5">
-    <p class="font-display text-xs font-bold uppercase tracking-widest text-coral">
-      Episodio {number} · {formattedDate}
-    </p>
-    <h3 class="mt-2 font-display text-xl font-bold text-ink">
+
+  <div class="min-w-0 flex-1">
+    <div class="flex flex-wrap items-center gap-2">
+      <p class="font-label text-xs font-bold uppercase tracking-widest text-coral">
+        {!dateIsUnknown && dateIsApproximate ? "Fecha aprox. " : ""}{formattedDate}
+      </p>
+      {
+        audioStatus !== "available" && transcriptStatus !== "not_applicable" && (
+          <span class="rounded-full border border-ink/30 px-2 py-0.5 font-label text-[0.65rem] font-bold uppercase tracking-wide text-ink-soft">
+            {audioStatus === "pending_export" ? "Audio en camino" : "Sin audio todavía"}
+          </span>
+        )
+      }
+    </div>
+
+    <h3 class="mt-1 font-display text-2xl leading-tight text-ink sm:text-3xl">
       <a href={withBase(`/episodios/${episode.id}/`)} class="focus-ring rounded hover:text-coral">
         {title}
       </a>
     </h3>
-    <p class="mt-2 line-clamp-3 flex-1 text-sm text-ink-soft">{summary}</p>
 
-    {
-      topics.length > 0 && (
-        <ul class="mt-3 flex flex-wrap gap-1.5">
-          {topics.slice(0, 3).map((topic) => (
-            <li class="rounded-full border border-ink/20 bg-sky px-2.5 py-0.5 text-xs font-medium text-ink-soft">
-              {topic}
-            </li>
-          ))}
-        </ul>
-      )
-    }
+    <p class="mt-2 max-w-2xl text-ink-soft">{summary}</p>
 
-    <div class="mt-4 flex items-center justify-between text-sm">
-      {durationMinutes && <span class="text-ink-soft">{durationMinutes} min</span>}
-      <a href={withBase(`/episodios/${episode.id}/`)} class="focus-ring ml-auto rounded font-bold text-ink hover:text-coral">
-        Escuchar →
-      </a>
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      {
+        topics.slice(0, 4).map((topic) => (
+          <span class={`sticker border border-ink/30 px-2.5 py-1 font-label text-xs font-semibold text-ink-soft ${tone}`}>
+            {topic}
+          </span>
+        ))
+      }
+      {durationMinutes && <span class="text-xs font-semibold text-ink-soft/70">{durationMinutes} min</span>}
     </div>
+
+    <a
+      href={withBase(`/episodios/${episode.id}/`)}
+      class="focus-ring mt-4 inline-flex items-center gap-1 rounded font-display text-xs text-ink hover:text-coral"
+    >
+      Escuchar / leer →
+    </a>
   </div>
+
+  {
+    cover && (
+      <Image
+        src={cover}
+        alt=""
+        width={160}
+        height={160}
+        class={`hidden h-28 w-28 shrink-0 rounded-xl border-2 border-ink object-cover sm:block ${tilt}`}
+      />
+    )
+  }
 </article>

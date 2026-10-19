@@ -1,9 +1,8 @@
 ---
 import NextSpace from "./NextSpace.tsx";
 import { getNextSpace } from "../lib/time";
-import { buildGoogleCalendarUrl } from "../lib/calendar";
+import { buildGoogleCalendarUrl, DEFAULT_DURATION_MS } from "../lib/calendar";
 import { DISPLAY_TIMEZONES } from "../data/schedule";
-import { withBase } from "../lib/url";
 
 const next = getNextSpace();
 const googleCalendarUrl = buildGoogleCalendarUrl(next);
@@ -12,8 +11,12 @@ const googleCalendarUrl = buildGoogleCalendarUrl(next);
 <NextSpace
   client:load
   instantISO={next.instant.toISOString()}
+  durationMs={DEFAULT_DURATION_MS}
   spaceUrl={next.confirmed?.spaceUrl}
   displayTimezones={DISPLAY_TIMEZONES}
   googleCalendarUrl={googleCalendarUrl}
-  icsUrl={withBase("/calendar/proximo-space.ics")}
 />
+
+{next.confirmed?.description && (
+  <p class="mt-4 text-center font-medium text-ink-soft">{next.confirmed.description}</p>
+)}

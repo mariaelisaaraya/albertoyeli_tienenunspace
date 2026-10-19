@@ -21,31 +21,57 @@ const data = episode.data;
 const transcriptEntry = data.transcriptId ? await getEntry("transcripts", data.transcriptId) : undefined;
 const segments = transcriptEntry?.data.segments ?? [];
 
-const formattedDate = new Intl.DateTimeFormat("es-AR", {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-  timeZone: "America/Argentina/Buenos_Aires",
-}).format(data.date);
+const formattedDate = data.dateIsUnknown
+  ? "fecha sin confirmar"
+  : new Intl.DateTimeFormat("es-AR", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC", // fecha de calendario pura, no un instante — no convertir de zona
+    }).format(data.date);
 
 const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).toString();
 ---
 
 <BaseLayout title={data.title} description={data.summary} type="article">
   <article class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-    <p class="font-display text-sm font-bold uppercase tracking-widest text-coral">
-      Episodio {data.number} · <span class="capitalize">{formattedDate}</span>
+    {
+      episode.id === "001-el-space-que-nunca-fue" && (
+        <div class="sketch-border mb-8 flex flex-col items-center gap-3 border-[3px] border-ink bg-ink px-6 py-10 text-center text-paper">
+          <svg width="160" height="40" viewBox="0 0 160 40" aria-hidden="true" class="text-mint">
+            <line x1="2" y1="20" x2="158" y2="20" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <p class="font-label text-xs font-bold uppercase tracking-[0.25em] text-paper/60">
+            Onda plana · 0 segundos
+          </p>
+        </div>
+      )
+    }
+    <p class="font-label text-sm font-bold uppercase tracking-widest text-coral">
+      Episodio {String(data.number).padStart(3, "0")} ·{" "}
+      {!data.dateIsUnknown && data.dateIsApproximate && "Fecha aprox. "}
+      <span class="capitalize">{formattedDate}</span>
     </p>
-    <h1 class="mt-2 font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
+    <h1 class="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl">
       {data.title}
     </h1>
 
     {
-      data.guests.length > 0 && (
+      (data.host || data.guests.length > 0) && (
         <p class="mt-3 text-ink-soft">
-          Con {data.guests.join(", ")}
+          {data.host && <>Host: <strong class="text-ink">{data.host}</strong></>}
+          {data.host && data.guests.length > 0 && " · "}
+          {data.guests.length > 0 && <>Con {data.guests.join(", ")}</>}
         </p>
+      )
+    }
+
+    {
+      data.verificationNote && !data.minimalPresentation && (
+        <div class="sketch-border mt-5 border-2 border-ink/30 bg-sun-soft/60 px-4 py-3 text-sm text-ink-soft">
+          <strong class="text-ink">Qué está verificado:</strong> {data.verificationNote}
+        </div>
       )
     }
 
@@ -61,14 +87,14 @@ const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).
       )
     }
 
-    <div class="prose prose-lg mt-6 max-w-none text-ink-soft prose-headings:font-display prose-headings:text-ink prose-a:text-coral">
+    <div class="editorial-content mt-6 max-w-none text-ink-soft">
       <Content />
     </div>
 
     {
       data.highlights.length > 0 && (
-        <div class="mt-8 rounded-doodle border-2 border-ink bg-sun-soft p-5">
-          <h2 class="font-display text-lg font-bold text-ink">Ideas destacadas</h2>
+        <div class="sketch-border mt-8 border-2 border-ink bg-sun-soft p-5">
+          <h2 class="font-display text-lg text-ink">Ideas destacadas</h2>
           <ul class="mt-3 list-disc space-y-1.5 pl-5 text-ink-soft">
             {data.highlights.map((h) => (
               <li>{h}</li>
@@ -78,12 +104,23 @@ const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).
       )
     }
 
-    <div class="mt-8 flex flex-wrap items-center gap-3">
+    <div class="mt-8 flex flex-col gap-3">
       {
-        data.audioUrl && (
-          <audio controls class="w-full rounded-full" id="episode-audio">
+        data.audioUrl ? (
+          <audio controls preload="metadata" class="w-full rounded-full" id="episode-audio">
             <source src={withBase(data.audioUrl)} />
           </audio>
+        ) : (
+          !data.minimalPresentation && (
+            <div class="sketch-border flex items-center gap-3 border-2 border-dashed border-ink/30 bg-paper px-4 py-3 text-sm text-ink-soft">
+              <span class="text-lg" aria-hidden="true">
+                {data.audioStatus === "pending_export" ? "🎙️" : "🔇"}
+              </span>
+              {data.audioStatus === "pending_export"
+                ? "El audio todavía no fue exportado por el host. Se va a publicar en cuanto esté disponible."
+                : "No pudimos recuperar el audio de este Space por medios autorizados (no hay API pública para grabaciones de X Spaces ya finalizados). Si el host lo exporta, lo sumamos acá."}
+            </div>
+          )
         )
       }
       {
@@ -92,9 +129,9 @@ const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).
             href={data.spaceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="focus-ring rounded-full border-2 border-ink bg-ink px-5 py-2.5 font-display font-bold text-paper"
+            class="focus-ring self-start rounded-full border-2 border-ink bg-ink px-5 py-2.5 font-display text-sm text-paper"
           >
-            Escuchar Space original en X
+            Ver Space original en X
           </a>
         )
       }
@@ -103,8 +140,8 @@ const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).
     {
       data.topics.length > 0 && (
         <ul class="mt-6 flex flex-wrap gap-2">
-          {data.topics.map((topic) => (
-            <li class="rounded-full border border-ink/20 bg-sky-deep px-3 py-1 text-sm font-medium text-ink-soft">
+          {data.topics.map((topic, i) => (
+            <li class={`sticker border border-ink/30 px-3 py-1.5 font-label text-sm font-semibold text-ink-soft ${i % 2 === 0 ? "bg-sky-deep" : "bg-sun-soft"}`}>
               {topic}
             </li>
           ))}
@@ -138,18 +175,43 @@ const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).
       <ShareButtons title={data.title} url={canonicalUrl} />
     </div>
 
-    <hr class="my-10 border-t-2 border-dashed border-ink/20" />
+    {data.transcriptStatus !== "not_applicable" && (
+      <>
+        <hr class="my-10 border-t-2 border-dashed border-ink/20" />
 
-    <section>
-      <h2 class="font-display text-2xl font-extrabold text-ink">Transcripción</h2>
-      <div class="mt-5">
-        <TranscriptViewer
-          client:load
-          segments={segments}
-          status={data.transcriptStatus}
-          hasAudio={Boolean(data.audioUrl)}
-        />
-      </div>
-    </section>
+        {
+          segments.length > 0 ? (
+            <details class="rounded-doodle border-2 border-ink/20 bg-paper/60 p-5">
+              <summary class="focus-ring cursor-pointer rounded font-display text-lg text-ink">
+                Leer la transcripción completa
+              </summary>
+              <p class="mt-3 text-sm text-ink-soft">
+                Buscá una palabra o usá las marcas de tiempo para encontrar un momento de la charla.
+              </p>
+              <div class="mt-5">
+                <TranscriptViewer
+                  client:load
+                  segments={segments}
+                  status={data.transcriptStatus}
+                  hasAudio={Boolean(data.audioUrl)}
+                />
+              </div>
+            </details>
+          ) : (
+            <section>
+              <h2 class="font-display text-2xl font-extrabold text-ink">Transcripción</h2>
+              <div class="mt-5">
+                <TranscriptViewer
+                  client:load
+                  segments={segments}
+                  status={data.transcriptStatus}
+                  hasAudio={Boolean(data.audioUrl)}
+                />
+              </div>
+            </section>
+          )
+        }
+      </>
+    )}
   </article>
 </BaseLayout>

@@ -1,0 +1,718 @@
+{
+  "Saltar al contenido": {
+    "en": "Skip to content",
+    "pt": "Pular para o conteúdo"
+  },
+  "Episodios": {
+    "en": "Episodes",
+    "pt": "Episódios"
+  },
+  "Próximo Space": {
+    "en": "Next Space",
+    "pt": "Próximo Space"
+  },
+  "Participá": {
+    "en": "Join us",
+    "pt": "Participe"
+  },
+  "Menú": {
+    "en": "Menu",
+    "pt": "Menu"
+  },
+  "88.2 · En vivo desde X Spaces": {
+    "en": "88.2 · Live on X Spaces",
+    "pt": "88.2 · Ao vivo no X Spaces"
+  },
+  "Dos países. Dos micrófonos.": {
+    "en": "Two countries. Two microphones.",
+    "pt": "Dois países. Dois microfones."
+  },
+  "Cero guion.": {
+    "en": "No script.",
+    "pt": "Sem roteiro."
+  },
+  "Dos personas, muchas preguntas y conversaciones que valen la pena. Todos los viernes nos metemos en un X Space a hablar de tecnología, curiosidad y lo que se nos cruce, sin guion y sin solemnidad.": {
+    "en": "Two people, plenty of questions and conversations worth having. Every Friday we jump into an X Space to talk about technology, curiosity and whatever comes up, with no script and no ceremony.",
+    "pt": "Duas pessoas, muitas perguntas e conversas que valem a pena. Toda sexta-feira entramos em um X Space para falar de tecnologia, curiosidade e o que aparecer, sem roteiro e sem cerimônia."
+  },
+  "Escuchá los episodios": {
+    "en": "Listen to the episodes",
+    "pt": "Ouça os episódios"
+  },
+  "Sumate al próximo Space": {
+    "en": "Join the next Space",
+    "pt": "Participe do próximo Space"
+  },
+  "¡todos los viernes!": {
+    "en": "every Friday!",
+    "pt": "toda sexta-feira!"
+  },
+  "◉ Próximo Space": {
+    "en": "◉ Next Space",
+    "pt": "◉ Próximo Space"
+  },
+  "días": {
+    "en": "days",
+    "pt": "dias"
+  },
+  "hs": {
+    "en": "hrs",
+    "pt": "h"
+  },
+  "seg": {
+    "en": "sec",
+    "pt": "seg"
+  },
+  "Agendar en Google": {
+    "en": "Add to Google Calendar",
+    "pt": "Adicionar ao Google Agenda"
+  },
+  "Nos reencontramos el 30 de octubre. ¿Juntos cara a cara? El formato presencial está por confirmar. Reservá la fecha.": {
+    "en": "We meet again on October 30. Together face to face? The in-person format is still to be confirmed. Save the date.",
+    "pt": "Nos reencontramos em 30 de outubro. Juntos cara a cara? O formato presencial ainda será confirmado. Reserve a data."
+  },
+  "Últimos episodios": {
+    "en": "Latest episodes",
+    "pt": "Últimos episódios"
+  },
+  "Ver todo el archivo →": {
+    "en": "View the full archive →",
+    "pt": "Ver todo o arquivo →"
+  },
+  "¿Juntos cara a cara?": {
+    "en": "Together face to face?",
+    "pt": "Juntos cara a cara?"
+  },
+  "Volvemos el 30/10. Puede ser, puede no ser… El cara a cara está por confirmar. ¡Guardá la fecha!": {
+    "en": "We're back on October 30. Maybe together, maybe not… The face-to-face meeting is still to be confirmed. Save the date!",
+    "pt": "Voltamos em 30/10. Pode ser, pode não ser… O encontro cara a cara ainda será confirmado. Reserve a data!"
+  },
+  "Agendar el 30/10": {
+    "en": "Save October 30",
+    "pt": "Agendar 30/10"
+  },
+  "S/E": {
+    "en": "N/E",
+    "pt": "S/E"
+  },
+  "Alberto estuvo en Lisboa": {
+    "en": "Alberto was in Lisbon",
+    "pt": "Alberto esteve em Lisboa"
+  },
+  "Sin episodio esta semana.": {
+    "en": "No episode this week.",
+    "pt": "Sem episódio nesta semana."
+  },
+  "Alberto estuvo en Canadá": {
+    "en": "Alberto was in Canada",
+    "pt": "Alberto esteve no Canadá"
+  },
+  "Tarjetas cripto y pagos en el mundo real": {
+    "en": "Crypto cards and real-world payments",
+    "pt": "Cartões cripto e pagamentos no mundo real"
+  },
+  "Pagos": {
+    "en": "Payments",
+    "pt": "Pagamentos"
+  },
+  "Producto": {
+    "en": "Product",
+    "pt": "Produto"
+  },
+  "Escuchar / leer →": {
+    "en": "Listen / read →",
+    "pt": "Ouvir / ler →"
+  },
+  "Demos, pitch y feedback para builders": {
+    "en": "Demos, pitches and feedback for builders",
+    "pt": "Demos, pitch e feedback para builders"
+  },
+  "Cómo mostrar lo que construís, preparar una demo clara y aprovechar el feedback. Eli, Alberto y la comunidad comparten experiencias de hackathons, presentaciones y productos.": {
+    "en": "How to show what you build, prepare a clear demo and make the most of feedback. Eli, Alberto and the community share experiences from hackathons, presentations and products.",
+    "pt": "Como mostrar o que você constrói, preparar uma demo clara e aproveitar o feedback. Eli, Alberto e a comunidade compartilham experiências de hackathons, apresentações e produtos."
+  },
+  "Comunidad": {
+    "en": "Community",
+    "pt": "Comunidade"
+  },
+  "Hablemos de X402": {
+    "en": "Let's talk about X402",
+    "pt": "Vamos falar de X402"
+  },
+  "Qué resuelve x402 y qué falta alrededor del pago: reembolsos, escrows, permisos y límites para agentes de IA. Con ejemplos y aprendizajes de Eli, Alberto y Vaios.": {
+    "en": "What x402 solves and what payments still need: refunds, escrows, permissions and limits for AI agents. With examples and lessons from Eli, Alberto and Vaios.",
+    "pt": "O que o x402 resolve e o que falta ao redor do pagamento: reembolsos, escrows, permissões e limites para agentes de IA. Com exemplos e aprendizados de Eli, Alberto e Vaios."
+  },
+  "Agentes de IA": {
+    "en": "AI agents",
+    "pt": "Agentes de IA"
+  },
+  "Este micrófono también puede ser tuyo": {
+    "en": "This microphone could be yours too",
+    "pt": "Este microfone também pode ser seu"
+  },
+  "¿Tenés algo interesante para contar? Vení a charlar con nosotros.": {
+    "en": "Have something interesting to share? Come chat with us.",
+    "pt": "Tem algo interessante para contar? Venha conversar com a gente."
+  },
+  "Postulate para participar": {
+    "en": "Apply to join us",
+    "pt": "Inscreva-se para participar"
+  },
+  "Conducen": {
+    "en": "Your hosts",
+    "pt": "Apresentadores"
+  },
+  "Co-conductora · Argentina": {
+    "en": "Co-host · Argentina",
+    "pt": "Coapresentadora · Argentina"
+  },
+  "FullStack developer y Web3 builder. Fundadora de Buen Día Builders, un ecosistema que forma y acompaña a mujeres de Latinoamérica en Web3. Cofundadora de Lendara, infraestructura para Stellar.": {
+    "en": "Full-stack developer and Web3 builder. Founder of Buen Día Builders, an ecosystem that trains and supports women in Latin America in Web3. Co-founder of Lendara, infrastructure for Stellar.",
+    "pt": "Desenvolvedora full stack e builder Web3. Fundadora do Buen Día Builders, um ecossistema que forma e acompanha mulheres da América Latina em Web3. Cofundadora da Lendara, infraestrutura para Stellar."
+  },
+  "Leer bio completa →": {
+    "en": "Read full bio →",
+    "pt": "Ler biografia completa →"
+  },
+  "Co-conductor · Costa Rica": {
+    "en": "Co-host · Costa Rica",
+    "pt": "Coapresentador · Costa Rica"
+  },
+  "Product leader y fundador de TechRebel. CEO de Trustless Work, construyendo escrow modular para Web3, y Web3 scout en Draper University.": {
+    "en": "Product leader and founder of TechRebel. CEO of Trustless Work, building modular escrow for Web3, and Web3 scout at Draper University.",
+    "pt": "Líder de produto e fundador da TechRebel. CEO da Trustless Work, construindo escrow modular para Web3, e scout Web3 na Draper University."
+  },
+  "Conversaciones semanales en X Spaces. Todos los viernes, 13:00 Argentina · 10:00 Costa Rica.": {
+    "en": "Weekly conversations on X Spaces. Every Friday, 13:00 Argentina · 10:00 Costa Rica.",
+    "pt": "Conversas semanais no X Spaces. Toda sexta-feira, 13:00 Argentina · 10:00 Costa Rica."
+  },
+  "© 2026 AlbertoYEli. Hecho con curiosidad, café y viernes a la tarde.": {
+    "en": "© 2026 AlbertoYEli. Made with curiosity, coffee and Friday afternoons.",
+    "pt": "© 2026 AlbertoYEli. Feito com curiosidade, café e tardes de sexta-feira."
+  },
+  "Nos encontramos todos los viernes": {
+    "en": "We meet every Friday",
+    "pt": "Nos encontramos toda sexta-feira"
+  },
+  "El horario se calcula siempre con la zona horaria de referencia de Argentina (": {
+    "en": "Times are always calculated using Argentina's reference time zone (",
+    "pt": "O horário é sempre calculado com o fuso de referência da Argentina ("
+  },
+  "), así que se ajusta automáticamente a cambios de horario de verano en cualquier país. Si alguna semana no hay Space, lo vamos a avisar acá y en X.": {
+    "en": "), so they adjust automatically to daylight saving changes in any country. If we skip a week, we'll announce it here and on X.",
+    "pt": "), ajustando-se automaticamente às mudanças de horário de verão em qualquer país. Se alguma semana não tiver Space, avisaremos aqui e no X."
+  },
+  "← Conducen": {
+    "en": "← Your hosts",
+    "pt": "← Apresentadores"
+  },
+  "FullStack developer y Web3 builder. Fundó Buen Día Builders, un ecosistema que forma y acompaña a mujeres de Latinoamérica para pasar de aprender a programar a construir y liderar sus propios proyectos en Web3. Es cofundadora de Lendara, infraestructura para Stellar.": {
+    "en": "Full-stack developer and Web3 builder. She founded Buen Día Builders, an ecosystem that trains and supports women in Latin America as they go from learning to code to building and leading their own Web3 projects. She is co-founder of Lendara, infrastructure for Stellar.",
+    "pt": "Desenvolvedora full stack e builder Web3. Fundou o Buen Día Builders, um ecossistema que forma e acompanha mulheres da América Latina, desde aprender a programar até construir e liderar seus próprios projetos Web3. É cofundadora da Lendara, infraestrutura para Stellar."
+  },
+  "Se mueve entre Solidity y Soroban/Stellar: desarrolla y testea contratos inteligentes, mentorea en hackathons internacionales (ganó varias junto a distintos equipos) y participa en proyectos open source.": {
+    "en": "She works across Solidity and Soroban/Stellar: developing and testing smart contracts, mentoring at international hackathons (winning several with different teams) and contributing to open-source projects.",
+    "pt": "Trabalha com Solidity e Soroban/Stellar: desenvolve e testa contratos inteligentes, mentora em hackathons internacionais (venceu vários com diferentes equipes) e participa de projetos open source."
+  },
+  "Da clases y guía a nuevas desarrolladoras: fue tutora de programación backend (Node.js, diseño de APIs, bases de datos) y gestionó la parte académica de un programa full stack. También escribe contenido educativo sobre blockchain y Web3.": {
+    "en": "She teaches and guides new developers: she tutored backend programming (Node.js, API design, databases) and managed the academic side of a full-stack program. She also writes educational content about blockchain and Web3.",
+    "pt": "Dá aulas e orienta novas desenvolvedoras: foi tutora de programação backend (Node.js, design de APIs, bancos de dados) e gerenciou a parte acadêmica de um programa full stack. Também escreve conteúdo educativo sobre blockchain e Web3."
+  },
+  "Conduce junto a": {
+    "en": "Co-hosts with",
+    "pt": "Apresenta junto com"
+  },
+  "Product leader y fundador de TechRebel. Es CEO de Trustless Work, donde lidera el desarrollo de soluciones de escrow modulares y transparentes para Web3, pensadas para abstraer la complejidad de los contratos inteligentes en casos como crowdfunding, marketplaces y pagos cross-border.": {
+    "en": "Product leader and founder of TechRebel. He is CEO of Trustless Work, leading the development of modular, transparent escrow solutions for Web3 that abstract smart-contract complexity for crowdfunding, marketplaces and cross-border payments.",
+    "pt": "Líder de produto e fundador da TechRebel. É CEO da Trustless Work, onde lidera o desenvolvimento de soluções de escrow modulares e transparentes para Web3, que abstraem a complexidade dos contratos inteligentes em crowdfunding, marketplaces e pagamentos internacionais."
+  },
+  "Es Web3 scout en Draper University, mentoreando founders en etapa temprana para refinar sus ideas y encontrar tracción. Formado originalmente en ingeniería biomédica, llegó a la tecnología inspirado por el trabajo remoto y el impacto global.": {
+    "en": "He is a Web3 scout at Draper University, mentoring early-stage founders to refine their ideas and find traction. Originally trained in biomedical engineering, he moved into technology inspired by remote work and global impact.",
+    "pt": "É scout Web3 na Draper University, mentorando founders em estágio inicial para refinar suas ideias e encontrar tração. Com formação em engenharia biomédica, chegou à tecnologia inspirado pelo trabalho remoto e pelo impacto global."
+  },
+  "Además de sus proyectos propios, se desempeña como Delivery Manager en una empresa Fortune 500, liderando equipos multifuncionales. Pura vida desde Costa Rica.": {
+    "en": "Alongside his own projects, he works as a Delivery Manager at a Fortune 500 company, leading cross-functional teams. Pura vida from Costa Rica.",
+    "pt": "Além de seus projetos, atua como Delivery Manager em uma empresa Fortune 500, liderando equipes multidisciplinares. Pura vida da Costa Rica."
+  },
+  "Todas las conversaciones de AlbertoYEli, de la más reciente a la más vieja.": {
+    "en": "All AlbertoYEli conversations, from newest to oldest.",
+    "pt": "Todas as conversas de AlbertoYEli, da mais recente à mais antiga."
+  },
+  "Buscar episodios": {
+    "en": "Search episodes",
+    "pt": "Buscar episódios"
+  },
+  "Todos los temas": {
+    "en": "All topics",
+    "pt": "Todos os temas"
+  },
+  "Anécdota": {
+    "en": "Anecdote",
+    "pt": "Anedota"
+  },
+  "Todos los invitados": {
+    "en": "All guests",
+    "pt": "Todos os convidados"
+  },
+  "episodios": {
+    "en": "episodes",
+    "pt": "episódios"
+  },
+  "Eli y Alberto hacen un Space, parte 2": {
+    "en": "Eli and Alberto host a Space, part 2",
+    "pt": "Eli e Alberto fazem um Space, parte 2"
+  },
+  "¿Cuándo necesita blockchain un producto? Eli y Alberto conversan sobre hackathons, grants y pagos entre agentes de IA, con ejemplos del ecosistema Stellar.": {
+    "en": "When does a product need blockchain? Eli and Alberto discuss hackathons, grants and payments between AI agents, with examples from the Stellar ecosystem.",
+    "pt": "Quando um produto precisa de blockchain? Eli e Alberto conversam sobre hackathons, grants e pagamentos entre agentes de IA, com exemplos do ecossistema Stellar."
+  },
+  "El Space que nunca fue": {
+    "en": "The Space that never happened",
+    "pt": "O Space que nunca aconteceu"
+  },
+  "El Space que duró cero segundos y no tuvo audiencia. La única persona que lo comentó fue Romi, que nos banca con todo el aguante.": {
+    "en": "The Space that lasted zero seconds and had no audience. The only person who commented was Romi, who always has our back.",
+    "pt": "O Space que durou zero segundos e não teve público. A única pessoa que comentou foi Romi, que sempre nos apoia."
+  },
+  "Host:": {
+    "en": "Host:",
+    "pt": "Apresentador:"
+  },
+  "De qué hablamos": {
+    "en": "What we talked about",
+    "pt": "Sobre o que conversamos"
+  },
+  "Joaco presenta el proyecto que está construyendo con su socio Joaquín: una propuesta de tarjetas físicas que combina funciones de billetera y pagos en comercios. Hablamos del camino hasta el prototipo, de conseguir lectores y tarjetas y de los imprevistos que aparecen al llevar una demo al público.": {
+    "en": "Joaco presents the project he is building with his partner Joaquín: physical cards combining wallet functions and merchant payments. We discuss the road to a prototype, sourcing readers and cards, and surprises when presenting a demo to the public.",
+    "pt": "Joaco apresenta o projeto que está construindo com seu sócio Joaquín: cartões físicos que combinam funções de carteira e pagamentos no comércio. Falamos do caminho até o protótipo, da busca por leitores e cartões e dos imprevistos ao apresentar uma demo ao público."
+  },
+  "La conversación entra en la relación entre": {
+    "en": "The conversation explores the relationship between",
+    "pt": "A conversa aborda a relação entre"
+  },
+  "hardware, billeteras y pagos": {
+    "en": "hardware, wallets and payments",
+    "pt": "hardware, carteiras e pagamentos"
+  },
+  ": qué cambia entre una tarjeta física y el celular, cómo se autentican las operaciones y qué hace falta para integrarse con los comercios. También aparecen los costos, los proveedores y la dificultad de explicar el valor de una solución a alguien que no está metido en blockchain.": {
+    "en": ": what changes between a physical card and a phone, how transactions are authenticated, and what merchant integration requires. We also discuss costs, suppliers and the difficulty of explaining a solution's value to someone outside blockchain.",
+    "pt": ": o que muda entre um cartão físico e o celular, como as operações são autenticadas e o que é necessário para integrar os comércios. Também falamos de custos, fornecedores e da dificuldade de explicar o valor de uma solução a quem não conhece blockchain."
+  },
+  "Eli y Alberto ayudan a ordenar la propuesta: ¿el cliente es la persona que paga, el comercio o una billetera que quiere ofrecer tarjetas? Conversamos sobre": {
+    "en": "Eli and Alberto help clarify the proposal: is the customer the payer, the merchant or a wallet that wants to offer cards? We talk about",
+    "pt": "Eli e Alberto ajudam a organizar a proposta: o cliente é quem paga, o comércio ou uma carteira que quer oferecer cartões? Conversamos sobre"
+  },
+  "validar primero un caso de uso concreto": {
+    "en": "validating a specific use case first",
+    "pt": "validar primeiro um caso de uso concreto"
+  },
+  ", como pagos en festivales o bares, y aprender de esas pruebas antes de intentar cubrir toda una red de pagos.": {
+    "en": ", such as payments at festivals or bars, and learning from those tests before trying to cover an entire payment network.",
+    "pt": ", como pagamentos em festivais ou bares, e aprender com esses testes antes de tentar atender toda uma rede de pagamentos."
+  },
+  "El cierre deja una idea compartida: observar cómo usa la gente un producto puede cambiar lo que imaginábamos al construirlo. También aparecen las pruebas de escrows y agentes en Arc y las próximas hackathons de la comunidad.": {
+    "en": "We close on a shared idea: watching how people use a product can change what we imagined while building it. We also touch on escrow and agent experiments on Arc and upcoming community hackathons.",
+    "pt": "O encerramento traz uma ideia em comum: observar como as pessoas usam um produto pode mudar o que imaginávamos ao construí-lo. Também aparecem os testes de escrows e agentes na Arc e os próximos hackathons da comunidade."
+  },
+  "Lo que sumó la comunidad": {
+    "en": "What the community added",
+    "pt": "Contribuições da comunidade"
+  },
+  "El Space del": {
+    "en": "The Space on",
+    "pt": "O Space de"
+  },
+  "reunió a": {
+    "en": "brought together",
+    "pt": "reuniu"
+  },
+  "57 personas conectadas": {
+    "en": "57 people connected",
+    "pt": "57 pessoas conectadas"
+  },
+  "Ideas destacadas": {
+    "en": "Key ideas",
+    "pt": "Ideias em destaque"
+  },
+  "En hardware también hay que probar componentes, costos y experiencia de uso.": {
+    "en": "Hardware also requires testing components, costs and user experience.",
+    "pt": "Em hardware também é necessário testar componentes, custos e experiência de uso."
+  },
+  "Un primer caso de uso acotado puede ayudar a validar el prototipo antes de ampliar la propuesta.": {
+    "en": "A focused initial use case can help validate the prototype before expanding the proposal.",
+    "pt": "Um primeiro caso de uso limitado pode ajudar a validar o protótipo antes de ampliar a proposta."
+  },
+  "Definir si construís para usuarios, comercios o billeteras cambia el modelo de negocio.": {
+    "en": "Whether you build for users, merchants or wallets changes the business model.",
+    "pt": "Definir se você constrói para usuários, comércios ou carteiras muda o modelo de negócio."
+  },
+  "Ver Space original en X": {
+    "en": "View the original Space on X",
+    "pt": "Ver o Space original no X"
+  },
+  "Compartir:": {
+    "en": "Share:",
+    "pt": "Compartilhar:"
+  },
+  "Postear en X": {
+    "en": "Post on X",
+    "pt": "Publicar no X"
+  },
+  "Copiar enlace": {
+    "en": "Copy link",
+    "pt": "Copiar link"
+  },
+  "Leer la transcripción completa": {
+    "en": "Read the full transcript",
+    "pt": "Ler a transcrição completa"
+  },
+  "Buscá una palabra o usá las marcas de tiempo para encontrar un momento de la charla.": {
+    "en": "Search for a word or use timestamps to find a moment in the conversation. Transcript in the original language.",
+    "pt": "Busque uma palavra ou use os horários para encontrar um momento da conversa. Transcrição no idioma original."
+  },
+  "Transcripción generada automáticamente, puede tener errores": {
+    "en": "Automatically generated transcript; may contain errors",
+    "pt": "Transcrição gerada automaticamente; pode conter erros"
+  },
+  "Buscar en la transcripción": {
+    "en": "Search the transcript",
+    "pt": "Buscar na transcrição"
+  },
+  "Onda plana · 0 segundos": {
+    "en": "Flatline · 0 seconds",
+    "pt": "Linha reta · 0 segundos"
+  },
+  "Cero segundos. Cero audiencia. El Space más corto de la historia de AlbertoYEli.": {
+    "en": "Zero seconds. Zero audience. The shortest Space in AlbertoYEli history.",
+    "pt": "Zero segundos. Zero público. O Space mais curto da história de AlbertoYEli."
+  },
+  "La única persona que lo comentó fue": {
+    "en": "The only person who commented was",
+    "pt": "A única pessoa que comentou foi"
+  },
+  ". Gracias por el aguante, Romi. 💙": {
+    "en": ". Thanks for the support, Romi. 💙",
+    "pt": ". Obrigado pelo apoio, Romi. 💙"
+  },
+  "Enlaces mencionados": {
+    "en": "Mentioned links",
+    "pt": "Links mencionados"
+  },
+  "El posteo de Alberto sobre este Space": {
+    "en": "Alberto's post about this Space",
+    "pt": "A publicação de Alberto sobre este Space"
+  },
+  "La charla arranca con una discusión sobre el café de Costa Rica y Colombia y termina entrando en un desafío compartido por muchos builders:": {
+    "en": "The conversation starts with Costa Rican and Colombian coffee and moves into a challenge many builders share:",
+    "pt": "A conversa começa com o café da Costa Rica e da Colômbia e chega a um desafio compartilhado por muitos builders:"
+  },
+  "cómo mostrar lo que construimos para que alguien más lo entienda": {
+    "en": "how to show what we build so someone else understands it",
+    "pt": "como mostrar o que construímos para que outra pessoa entenda"
+  },
+  ". A partir de la revisión de proyectos de una hackathon de Stellar, hablamos de demos sin audio, videos demasiado largos y presentaciones que se quedan en el login sin llegar al caso de uso.": {
+    "en": ". Reviewing Stellar hackathon projects, we talk about demos without audio, videos that run too long and presentations that stop at login without reaching the use case.",
+    "pt": ". A partir da revisão de projetos de um hackathon da Stellar, falamos de demos sem áudio, vídeos longos demais e apresentações que ficam no login sem chegar ao caso de uso."
+  },
+  "Eli cuenta cómo practicó la defensa de un proyecto de tokenización para una diplomatura. La experiencia abre una conversación sobre el miedo a presentar, la preparación y las habilidades que se aprenden al explicar una idea a otras personas. Alberto suma la mirada de quien revisa muchas propuestas: comunicar con claridad, cuidar la identidad del producto y aprovechar los primeros minutos de atención.": {
+    "en": "Eli shares how she practiced defending a tokenization project for a diploma course. This opens a conversation about presentation anxiety, preparation and skills learned by explaining an idea. Alberto adds a reviewer's perspective: communicate clearly, preserve product identity and make the most of the first minutes of attention.",
+    "pt": "Eli conta como praticou a defesa de um projeto de tokenização para uma formação. A experiência abre uma conversa sobre o medo de apresentar, a preparação e as habilidades aprendidas ao explicar uma ideia. Alberto traz a visão de quem avalia muitas propostas: comunicar com clareza, cuidar da identidade do produto e aproveitar os primeiros minutos de atenção."
+  },
+  "También hablamos de": {
+    "en": "We also discuss",
+    "pt": "Também falamos de"
+  },
+  "buscar feedback y aprender a recibir críticas": {
+    "en": "seeking feedback and learning to receive criticism",
+    "pt": "buscar feedback e aprender a receber críticas"
+  },
+  ". Alberto comparte lo que espera de su participación en Creative Destruction Lab y las pruebas de Trustless Work en otras redes. La invitación es llevar los productos a conversaciones reales y usar esas oportunidades para practicar y mejorar.": {
+    "en": ". Alberto shares his expectations for Creative Destruction Lab and Trustless Work's experiments on other networks. The invitation is to bring products into real conversations and use those opportunities to practice and improve.",
+    "pt": ". Alberto compartilha suas expectativas para o Creative Destruction Lab e os testes da Trustless Work em outras redes. O convite é levar os produtos a conversas reais e usar essas oportunidades para praticar e melhorar."
+  },
+  "Martín se suma para contar su experiencia con": {
+    "en": "Martín joins to share his experience with",
+    "pt": "Martín se junta para contar sua experiência com"
+  },
+  ", una wallet y herramientas de pagos por WhatsApp, además de su paso por programas de formación para founders. Conversamos sobre colaborar con otros equipos, pedir ayuda concreta a los mentores y entender qué busca la persona que escucha una propuesta. También quedan preguntas sobre el uso de WhatsApp, los fondos de los usuarios y los cambios de reglas de las plataformas.": {
+    "en": ", a wallet and WhatsApp payment tools, as well as founder training programs. We discuss collaboration, asking mentors for specific help and understanding what a listener wants from a proposal. Questions remain about WhatsApp usage, user funds and changing platform rules.",
+    "pt": ", uma carteira e ferramentas de pagamentos pelo WhatsApp, além de sua passagem por programas de formação para founders. Conversamos sobre colaborar com outras equipes, pedir ajuda concreta aos mentores e entender o que busca quem escuta uma proposta. Também ficam perguntas sobre o uso do WhatsApp, os fundos dos usuários e as mudanças nas regras das plataformas."
+  },
+  "Jenny comparte la experiencia de organizar una hackathon en Perú: acercarse a universidades y comunidades, ofrecer mentoría y acompañar a quienes recién empiezan. Hablamos de animarse a participar y formar equipos con perfiles distintos, para aprender construyendo junto a otras personas. El cierre pone el foco en la participación de mujeres y en cómo el lenguaje y el acompañamiento pueden hacer estos espacios más abiertos.": {
+    "en": "Jenny shares her experience organizing a hackathon in Peru: reaching universities and communities, offering mentoring and supporting beginners. We discuss taking the leap and forming teams with different backgrounds to learn by building together. We close on women's participation and how language and support can make these spaces more welcoming.",
+    "pt": "Jenny compartilha a experiência de organizar um hackathon no Peru: aproximar-se de universidades e comunidades, oferecer mentoria e acompanhar iniciantes. Falamos de tomar coragem para participar e formar equipes com perfis diferentes, aprendendo ao construir juntos. O encerramento destaca a participação das mulheres e como a linguagem e o apoio podem tornar esses espaços mais acolhedores."
+  },
+  "66 personas conectadas": {
+    "en": "66 people connected",
+    "pt": "66 pessoas conectadas"
+  },
+  "Además de Eli y Alberto, se sumaron a la charla Sergio, Martín de ChatterPay y Jenny, con experiencias de evaluación, construcción de productos y organización de hackathons.": {
+    "en": "Alongside Eli and Alberto, Sergio, Martín from ChatterPay and Jenny joined the conversation, sharing experiences of evaluation, building products and organizing hackathons.",
+    "pt": "Além de Eli e Alberto, Sergio, Martín da ChatterPay e Jenny participaram da conversa, compartilhando experiências de avaliação, construção de produtos e organização de hackathons."
+  },
+  "Una demo breve, con audio y un caso de uso claro, ayuda a entender el valor del producto.": {
+    "en": "A short demo with audio and a clear use case helps people understand the product's value.",
+    "pt": "Uma demo breve, com áudio e um caso de uso claro, ajuda a entender o valor do produto."
+  },
+  "Presentar y defender una idea es una habilidad que se puede practicar.": {
+    "en": "Presenting and defending an idea is a skill you can practice.",
+    "pt": "Apresentar e defender uma ideia é uma habilidade que pode ser praticada."
+  },
+  "Compartir el producto y escuchar críticas permite encontrar qué mejorar.": {
+    "en": "Sharing your product and listening to criticism helps identify improvements.",
+    "pt": "Compartilhar o produto e ouvir críticas ajuda a encontrar o que melhorar."
+  },
+  "Acompañar a quienes empiezan y sumar más mujeres también forma parte de construir comunidad.": {
+    "en": "Supporting beginners and including more women is also part of building community.",
+    "pt": "Apoiar quem está começando e incluir mais mulheres também faz parte de construir comunidade."
+  },
+  "CapCut, mencionado para editar las demos": {
+    "en": "CapCut, mentioned for editing demos",
+    "pt": "CapCut, mencionado para editar as demos"
+  },
+  "ChatterPay: pagos por WhatsApp": {
+    "en": "ChatterPay: payments via WhatsApp",
+    "pt": "ChatterPay: pagamentos pelo WhatsApp"
+  },
+  "¿Usar un agente para pagar es lo mismo que usar x402?": {
+    "en": "Is using an agent to pay the same as using x402?",
+    "pt": "Usar um agente para pagar é o mesmo que usar x402?"
+  },
+  "Esa pregunta guía la charla entre Eli y Alberto. A partir de ejemplos de compras y consultas a APIs, separamos el medio de pago del protocolo: un agente puede operar con una tarjeta, mientras que x402 permite incorporar un pago a una petición de un recurso en internet.": {
+    "en": "That question guides Eli and Alberto's conversation. Using shopping and API examples, we separate payment methods from the protocol: an agent can use a card, while x402 lets a payment be included in an internet resource request.",
+    "pt": "Essa pergunta guia a conversa de Eli e Alberto. Com exemplos de compras e consultas a APIs, separamos o meio de pagamento do protocolo: um agente pode usar um cartão, enquanto o x402 permite incorporar um pagamento à solicitação de um recurso na internet."
+  },
+  "De ahí pasamos a una distinción clave:": {
+    "en": "From there we move to a key distinction:",
+    "pt": "Daí passamos a uma distinção importante:"
+  },
+  "pagar por acceso no es lo mismo que pagar por un resultado": {
+    "en": "paying for access is different from paying for a result",
+    "pt": "pagar por acesso é diferente de pagar por um resultado"
+  },
+  ". Una consulta a una API y un trabajo que necesita revisión plantean problemas diferentes. Hablamos de reembolsos, de posibles disputas y de cuándo tiene sentido usar un escrow para retener fondos hasta que se apruebe una entrega.": {
+    "en": ". An API query and work that needs review pose different problems. We discuss refunds, possible disputes and when escrow makes sense to hold funds until a delivery is approved.",
+    "pt": ". Uma consulta a uma API e um trabalho que precisa de revisão apresentam problemas diferentes. Falamos de reembolsos, possíveis disputas e de quando faz sentido usar um escrow para reter fundos até a aprovação de uma entrega."
+  },
+  "Vaios se suma con aprendizajes de su equipo al construir pagos automatizados. Cuenta ejemplos de agentes que ejecutan pagos ya definidos por una persona, listas de destinatarios permitidos y controles para evitar reintentos que dupliquen un pago. La pregunta deja de ser solamente cómo hacer que un agente pague y pasa a ser": {
+    "en": "Vaios shares lessons from his team building automated payments: agents executing human-defined payments, allowlists and safeguards against retries that duplicate payments. The question shifts from how to make an agent pay to",
+    "pt": "Vaios compartilha aprendizados de sua equipe ao construir pagamentos automatizados: agentes que executam pagamentos definidos por uma pessoa, listas de destinatários permitidos e controles contra tentativas que duplicam pagamentos. A pergunta deixa de ser apenas como fazer um agente pagar e passa a ser"
+  },
+  "qué puede decidir y qué acciones tiene realmente habilitadas": {
+    "en": "what it can decide and which actions it is actually allowed to take",
+    "pt": "o que ele pode decidir e quais ações realmente pode executar"
+  },
+  "También ponemos la lupa sobre la adopción: ¿de dónde sale el volumen de x402 y cuánto corresponde a un uso comercial real? Contrastamos las promesas con las pruebas y los casos de uso, y miramos proyectos de distintas redes para entender qué infraestructura todavía falta construir alrededor de los pagos. El cierre vuelve a la importancia de mirar el código y compartir aprendizajes en público.": {
+    "en": "We also examine adoption: where does x402 volume come from, and how much is real commercial usage? We compare promises with evidence and use cases, looking at projects across networks to understand what payment infrastructure is still missing. We close on reading the code and sharing lessons publicly.",
+    "pt": "Também analisamos a adoção: de onde vem o volume do x402 e quanto representa uso comercial real? Comparamos promessas com evidências e casos de uso, observando projetos de diferentes redes para entender qual infraestrutura ainda falta ao redor dos pagamentos. O encerramento retoma a importância de olhar o código e compartilhar aprendizados em público."
+  },
+  "El Space reunió a": {
+    "en": "The Space brought together",
+    "pt": "O Space reuniu"
+  },
+  "28 personas conectadas": {
+    "en": "28 people connected",
+    "pt": "28 pessoas conectadas"
+  },
+  ". Gracias a": {
+    "en": ". Thanks to",
+    "pt": ". Obrigado a"
+  },
+  "y a": {
+    "en": "and",
+    "pt": "e"
+  },
+  "por sumarse a la charla del 25 de septiembre.": {
+    "en": "for joining the September 25 conversation.",
+    "pt": "por participarem da conversa de 25 de setembro."
+  },
+  "x402 y pagos con agentes no son sinónimos: un agente también puede usar otros medios de pago.": {
+    "en": "x402 and agent payments are not synonyms: an agent can also use other payment methods.",
+    "pt": "x402 e pagamentos com agentes não são sinônimos: um agente também pode usar outros meios de pagamento."
+  },
+  "Pagar por acceso a una API y pagar por un resultado requieren controles distintos.": {
+    "en": "Paying for API access and paying for a result require different controls.",
+    "pt": "Pagar pelo acesso a uma API e pagar por um resultado exigem controles diferentes."
+  },
+  "Los límites de un agente también se definen en sus permisos y en el código que puede ejecutar.": {
+    "en": "An agent's limits are also defined by its permissions and the code it can execute.",
+    "pt": "Os limites de um agente também são definidos por suas permissões e pelo código que pode executar."
+  },
+  "Revolut y Visa: pago con agente de IA en Francia — The Paypers": {
+    "en": "Revolut and Visa: AI agent payment in France — The Paypers",
+    "pt": "Revolut e Visa: pagamento com agente de IA na França — The Paypers"
+  },
+  "Estudio de TRM Labs sobre pagos x402 — PYMNTS": {
+    "en": "TRM Labs study on x402 payments — PYMNTS",
+    "pt": "Estudo da TRM Labs sobre pagamentos x402 — PYMNTS"
+  },
+  "x402 y MPP: dos caminos para los pagos de agentes — BlockBeats": {
+    "en": "x402 and MPP: two paths for agent payments — BlockBeats",
+    "pt": "x402 e MPP: dois caminhos para pagamentos de agentes — BlockBeats"
+  },
+  "Ganadores del hackathon de agentes de Stellar — DoraHacks": {
+    "en": "Stellar agent hackathon winners — DoraHacks",
+    "pt": "Vencedores do hackathon de agentes da Stellar — DoraHacks"
+  },
+  "Ganadores del hackathon x402 de Solana — Phemex": {
+    "en": "Solana x402 hackathon winners — Phemex",
+    "pt": "Vencedores do hackathon x402 da Solana — Phemex"
+  },
+  "Ganadores del hackathon x402 de Ethereum — Phemex": {
+    "en": "Ethereum x402 hackathon winners — Phemex",
+    "pt": "Vencedores do hackathon x402 da Ethereum — Phemex"
+  },
+  "Entre bromas sobre Stellar y Ethereum, la charla llega a una pregunta que aparece mucho en las hackathons:": {
+    "en": "Between jokes about Stellar and Ethereum, the conversation reaches a common hackathon question:",
+    "pt": "Entre brincadeiras sobre Stellar e Ethereum, a conversa chega a uma pergunta comum nos hackathons:"
+  },
+  "¿este producto necesita blockchain?": {
+    "en": "does this product need blockchain?",
+    "pt": "este produto precisa de blockchain?"
+  },
+  "Eli trae lo que viene viendo como mentora y Alberto plantea que algunos proyectos pueden empezar sin ella, validar su propuesta y sumarla cuando aporte algo concreto.": {
+    "en": "Eli shares what she sees as a mentor, and Alberto suggests some projects can start without blockchain, validate their proposition and add it when it provides concrete value.",
+    "pt": "Eli traz o que observa como mentora, e Alberto sugere que alguns projetos podem começar sem blockchain, validar sua proposta e adicioná-la quando trouxer um valor concreto."
+  },
+  "También hablamos de cómo evaluar los proyectos: no es lo mismo participar para aprender que presentar un producto que ya tiene usuarios. Aparecen la dificultad de conseguir tracción en pocos días, el peso del pitch frente a una demo y la importancia de poder explicar lo que construiste, incluso cuando usaste IA para programarlo.": {
+    "en": "We also discuss evaluating projects: joining to learn differs from presenting a product with existing users. We cover the difficulty of gaining traction in a few days, the weight of pitches versus demos and the importance of explaining what you built, even when AI helped write the code.",
+    "pt": "Também falamos de como avaliar projetos: participar para aprender é diferente de apresentar um produto que já tem usuários. Surgem a dificuldade de conseguir tração em poucos dias, o peso do pitch frente à demo e a importância de explicar o que você construiu, mesmo usando IA para programar."
+  },
+  "La conversación pasa por los grants de Stellar y por cómo pensar una integración con entregables claros, sin depender de ganar financiamiento una y otra vez. Como ejemplo de una necesidad concreta, se comenta el uso de": {
+    "en": "The conversation covers Stellar grants and integrations with clear deliverables, without depending on winning funding repeatedly. As one concrete use case, we discuss",
+    "pt": "A conversa aborda os grants da Stellar e integrações com entregas claras, sem depender de ganhar financiamento repetidamente. Como exemplo de uma necessidade concreta, falamos de"
+  },
+  "escrows para depósitos de alquiler": {
+    "en": "escrow for rental deposits",
+    "pt": "escrows para depósitos de aluguel"
+  },
+  ": fondos que quedan retenidos hasta que se aprueba su liberación.": {
+    "en": ": funds held until their release is approved.",
+    "pt": ": fundos que ficam retidos até a aprovação de sua liberação."
+  },
+  "Hacia el final, el foco está en los": {
+    "en": "Toward the end, the focus turns to",
+    "pt": "No final, o foco passa para"
+  },
+  "pagos entre agentes de IA": {
+    "en": "payments between AI agents",
+    "pt": "pagamentos entre agentes de IA"
+  },
+  ". Conversamos sobre stablecoins, los riesgos de darle a un agente acceso a una billetera y la posibilidad de separar tareas: un agente hace el trabajo, otro lo revisa y una aprobación habilita el pago. Queda abierto el tema para seguir profundizando en otro Space.": {
+    "en": ". We discuss stablecoins, the risks of giving an agent wallet access and splitting tasks: one agent works, another reviews, and an approval enables payment. The topic stays open for a future Space.",
+    "pt": ". Conversamos sobre stablecoins, os riscos de dar acesso a uma carteira a um agente e a possibilidade de separar tarefas: um agente trabalha, outro revisa e uma aprovação autoriza o pagamento. O tema fica aberto para outro Space."
+  },
+  "Quiénes participaron": {
+    "en": "Who joined",
+    "pt": "Quem participou"
+  },
+  "Eli y Alberto conducen la charla, y": {
+    "en": "Eli and Alberto host the conversation, and",
+    "pt": "Eli e Alberto conduzem a conversa, e"
+  },
+  "se suma para contar lo que vienen construyendo y las actividades de la comunidad de Mendoza.": {
+    "en": "joins to share what they are building and activities from the Mendoza community.",
+    "pt": "se junta para contar o que estão construindo e as atividades da comunidade de Mendoza."
+  },
+  "85 personas conectadas": {
+    "en": "85 people connected",
+    "pt": "85 pessoas conectadas"
+  },
+  "Entre los comentarios reales que dejó la comunidad en el posteo del Space:": {
+    "en": "Among the community's actual comments on the Space post:",
+    "pt": "Entre os comentários reais da comunidade na publicação do Space:"
+  },
+  "compartió su repo": {
+    "en": "shared her repository",
+    "pt": "compartilhou seu repositório"
+  },
+  "para equipos organizando hackathons de Stellar, y lo acercó a": {
+    "en": "for teams organizing Stellar hackathons, sharing it with",
+    "pt": "para equipes organizando hackathons da Stellar, compartilhando com"
+  },
+  "y": {
+    "en": "and",
+    "pt": "e"
+  },
+  ", que escuchó el Space grabado, saludó a": {
+    "en": ", who listened to the recording, gave a shoutout to",
+    "pt": ", que ouviu a gravação, mandou um abraço para"
+  },
+  "y propuso organizar una hackathon o ideatón en Costa Rica junto a TicoBlockchain.": {
+    "en": "and suggested organizing a hackathon or ideathon in Costa Rica with TicoBlockchain.",
+    "pt": "e propôs organizar um hackathon ou ideathon na Costa Rica com a TicoBlockchain."
+  },
+  "dejó el": {
+    "en": "shared the",
+    "pt": "compartilhou o"
+  },
+  "roadmap de blockchain developer": {
+    "en": "blockchain developer roadmap",
+    "pt": "roadmap de desenvolvimento blockchain"
+  },
+  "que se compartió en los workshops de Anouk.": {
+    "en": "shared in Anouk's workshops.",
+    "pt": "compartilhado nos workshops de Anouk."
+  },
+  "acompañó la charla con comentarios y humor.": {
+    "en": "joined in with comments and humor.",
+    "pt": "acompanhou a conversa com comentários e humor."
+  },
+  "comentó sobre la convocatoria.": {
+    "en": "commented on the call for participants.",
+    "pt": "comentou sobre a chamada para participantes."
+  },
+  "Antes de elegir una blockchain, entender qué problema resuelve para el producto y sus usuarios.": {
+    "en": "Before choosing a blockchain, understand what problem it solves for the product and its users.",
+    "pt": "Antes de escolher uma blockchain, entenda qual problema ela resolve para o produto e seus usuários."
+  },
+  "Aprender en una hackathon y escalar un producto existente requieren expectativas distintas.": {
+    "en": "Learning at a hackathon and scaling an existing product call for different expectations.",
+    "pt": "Aprender em um hackathon e escalar um produto existente exigem expectativas diferentes."
+  },
+  "Los pagos entre agentes de IA abren preguntas sobre permisos, auditoría y liberación de fondos.": {
+    "en": "Payments between AI agents raise questions about permissions, auditing and releasing funds.",
+    "pt": "Pagamentos entre agentes de IA trazem questões sobre permissões, auditoria e liberação de fundos."
+  },
+  "afterStellar: recursos para construir e integrar en Stellar": {
+    "en": "afterStellar: resources for building and integrating on Stellar",
+    "pt": "afterStellar: recursos para construir e integrar na Stellar"
+  },
+  "¿Te venís a charlar con nosotros?": {
+    "en": "Come chat with us?",
+    "pt": "Vamos conversar?"
+  },
+  "Alberto y Eli abren el micrófono a personas con ideas, proyectos, historias o preguntas interesantes.": {
+    "en": "Alberto and Eli welcome people with interesting ideas, projects, stories or questions to the microphone.",
+    "pt": "Alberto e Eli abrem o microfone para pessoas com ideias, projetos, histórias ou perguntas interessantes."
+  },
+  "Formulario en configuración": {
+    "en": "Form being configured",
+    "pt": "Formulário em configuração"
+  },
+  "Todavía no conectamos el servicio de formularios. Mientras tanto, escribinos directamente a": {
+    "en": "We haven't connected our form service yet. In the meantime, write directly to",
+    "pt": "Ainda não conectamos o serviço de formulários. Enquanto isso, escreva diretamente para"
+  },
+  "o": {
+    "en": "or",
+    "pt": "ou"
+  },
+  "en X.": {
+    "en": "on X.",
+    "pt": "no X."
+  },
+  "Del prototipo a los pagos en comercios: tarjetas físicas, billeteras y primeros casos de uso. Con Joaco, hablamos de hardware, validación y productos para usuarios reales.": {
+    "en": "From prototype to merchant payments: physical cards, wallets and initial use cases. With Joaco, we discuss hardware, validation and products for real users.",
+    "pt": "Do protótipo aos pagamentos no comércio: cartões físicos, carteiras e primeiros casos de uso. Com Joaco, falamos de hardware, validação e produtos para usuários reais."
+  },
+  "El Space del **9 de octubre** reunió a **57 personas conectadas**. Joaco compartió su proyecto y abrió la conversación sobre cómo convertir una idea técnica en un producto que la gente pueda usar.": {
+    "en": "The October 9 Space brought together **57 people**. Joaco shared his project and opened a conversation about turning a technical idea into a product people can use.",
+    "pt": "O Space de **9 de outubro** reuniu **57 pessoas**. Joaco compartilhou seu projeto e abriu a conversa sobre como transformar uma ideia técnica em um produto que as pessoas possam usar."
+  },
+  "Agendar el 30 de octubre": {
+    "en": "Save October 30",
+    "pt": "Agendar para 30 de outubro"
+  }
+}

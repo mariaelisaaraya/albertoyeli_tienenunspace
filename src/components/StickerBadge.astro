@@ -1,0 +1,23 @@
+---
+interface Props {
+  tone?: "sun" | "mint" | "coral" | "sky";
+  rotate?: number;
+  class?: string;
+}
+
+const { tone = "sun", rotate = -3, class: className = "" } = Astro.props;
+
+const toneClasses: Record<string, string> = {
+  sun: "bg-sun",
+  mint: "bg-mint",
+  coral: "bg-coral-soft",
+  sky: "bg-sky-deep",
+};
+---
+
+<span
+  class={`sticker inline-flex items-center border-2 border-ink px-3 py-1.5 font-label text-xs font-bold uppercase tracking-wide text-ink ${toneClasses[tone]} ${className}`}
+  style={`transform: rotate(${rotate}deg)`}
+>
+  <slot />
+</span>

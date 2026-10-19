@@ -1,3 +1,4 @@
+import { useTranslationReady } from "../lib/useTranslationReady";
 import { useState, type FormEvent } from "react";
 
 interface Props {
@@ -20,13 +21,14 @@ const paises = [
 ];
 
 export default function GuestForm({ formspreeId }: Props) {
+  const languageRoot = useTranslationReady();
   const [status, setStatus] = useState<Status>("idle");
   const [consent, setConsent] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   if (!formspreeId) {
     return (
-      <div className="rounded-doodle border-2 border-dashed border-ink/30 bg-paper/60 px-6 py-10 text-center">
+      <div ref={languageRoot} className="rounded-doodle border-2 border-dashed border-ink/30 bg-paper/60 px-6 py-10 text-center">
         <p className="font-display text-lg font-bold text-ink">Formulario en configuración</p>
         <p className="mt-2 text-sm text-ink-soft">
           Todavía no conectamos el servicio de formularios. Mientras tanto, escribinos directamente
@@ -87,7 +89,7 @@ export default function GuestForm({ formspreeId }: Props) {
 
   if (status === "success") {
     return (
-      <div className="rounded-doodle border-2 border-ink bg-mint-soft px-6 py-10 text-center">
+      <div ref={languageRoot} className="rounded-doodle border-2 border-ink bg-mint-soft px-6 py-10 text-center">
         <p className="font-display text-lg font-bold text-ink">¡Postulación enviada!</p>
         <p className="mt-2 text-sm text-ink-soft">
           Gracias por escribirnos. Si tu propuesta encaja con un próximo Space, te contactamos por
@@ -98,7 +100,7 @@ export default function GuestForm({ formspreeId }: Props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form ref={languageRoot} onSubmit={handleSubmit} className="space-y-5">
       <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
       <div className="grid gap-5 sm:grid-cols-2">
