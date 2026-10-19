@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GuestForm from "../components/GuestForm.tsx";
+
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID as string | undefined;
+---
+
+<BaseLayout
+  title="Participá"
+  description="¿Te venís a charlar con nosotros? Postulate para participar en un próximo Space de AlbertoYEli."
+>
+  <section class="mx-auto max-w-2xl px-4 py-12 sm:px-6">
+    <h1 class="font-display text-4xl font-extrabold text-ink">¿Te venís a charlar con nosotros?</h1>
+    <p class="mt-3 text-ink-soft">
+      Alberto y Eli abren el micrófono a personas con ideas, proyectos, historias o preguntas
+      interesantes.
+    </p>
+
+    <div class="mt-8">
+      <GuestForm client:load formspreeId={formspreeId} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class="mx-auto flex max-w-md flex-col items-center rounded-doodle border-2 border-dashed border-ink/30 bg-paper/60 px-6 py-14 text-center">
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    aria-hidden="true"
+    class="mb-4 text-ink/40"
+  >
+    <circle cx="28" cy="28" r="25" stroke="currentColor" stroke-width="2.5" stroke-dasharray="5 6" />
+    <path d="M19 32c3-4 6-6 9-6s6 2 9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="22" cy="22" r="2" fill="currentColor" />
+    <circle cx="34" cy="22" r="2" fill="currentColor" />
+  </svg>
+  <h3 class="font-display text-lg font-bold text-ink">{title}</h3>
+  <p class="mt-2 text-sm text-ink-soft">{description}</p>
+</div>

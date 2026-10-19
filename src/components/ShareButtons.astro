@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+const text = encodeURIComponent(title);
+const shareUrl = encodeURIComponent(url);
+---
+
+<div class="flex flex-wrap items-center gap-2">
+  <span class="text-sm font-semibold text-ink-soft">Compartir:</span>
+  <a
+    href={`https://x.com/intent/post?text=${text}&url=${shareUrl}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="focus-ring rounded-full border-2 border-ink bg-paper px-4 py-1.5 text-sm font-bold text-ink hover:bg-sky-deep"
+  >
+    Postear en X
+  </a>
+  <button
+    type="button"
+    data-share-url={url}
+    class="focus-ring copy-link-btn rounded-full border-2 border-ink bg-paper px-4 py-1.5 text-sm font-bold text-ink hover:bg-sky-deep"
+  >
+    Copiar enlace
+  </button>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>(".copy-link-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const url = btn.dataset.shareUrl;
+      if (!url) return;
+      try {
+        await navigator.clipboard.writeText(url);
+        const original = btn.textContent;
+        btn.textContent = "¡Copiado!";
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 1500);
+      } catch {
+        // Clipboard no disponible; no hacemos nada.
+      }
+    });
+  });
+</script>

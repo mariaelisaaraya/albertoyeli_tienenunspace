@@ -1,0 +1,56 @@
+---
+import { withBase } from "../lib/url";
+
+const navLinks = [
+  { href: withBase("/episodios"), label: "Episodios" },
+  { href: withBase("/proximo-space"), label: "Próximo Space" },
+  { href: withBase("/participa"), label: "Participá" },
+];
+
+const path = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 border-b-2 border-ink/10 bg-sky/90 backdrop-blur">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
+    <a href={withBase("/")} class="focus-ring flex items-center gap-2 rounded-full">
+      <span class="font-display text-xl font-bold tracking-tight text-ink sm:text-2xl">
+        Alberto<span class="text-coral">Y</span>Eli
+      </span>
+    </a>
+
+    <nav aria-label="Principal" class="hidden items-center gap-1 sm:flex">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            aria-current={path === link.href ? "page" : undefined}
+            class="focus-ring rounded-full px-3 py-2 font-medium text-ink-soft transition hover:bg-sky-deep hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <details class="relative sm:hidden">
+      <summary
+        class="focus-ring flex cursor-pointer list-none items-center rounded-full border-2 border-ink px-3 py-1.5 font-medium text-ink"
+        aria-label="Abrir menú"
+      >
+        Menú
+      </summary>
+      <nav
+        aria-label="Principal"
+        class="absolute right-0 mt-2 flex w-48 flex-col gap-1 rounded-2xl border-2 border-ink bg-paper p-2 shadow-doodle-sm"
+      >
+        {
+          navLinks.map((link) => (
+            <a href={link.href} class="focus-ring rounded-xl px-3 py-2 font-medium text-ink hover:bg-sky-deep">
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </details>
+  </div>
+</header>

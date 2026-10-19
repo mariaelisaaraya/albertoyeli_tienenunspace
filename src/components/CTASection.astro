@@ -1,0 +1,23 @@
+---
+import { withBase } from "../lib/url";
+---
+
+<section class="mx-auto my-16 max-w-5xl px-4 sm:px-6">
+  <div class="relative overflow-hidden rounded-doodle border-2 border-ink bg-coral-soft px-6 py-10 text-center sm:px-10 sm:py-14">
+    <div class="absolute -right-6 -top-6 h-24 w-24 rotate-12 rounded-doodle border-2 border-ink bg-sun" aria-hidden="true"></div>
+    <div class="absolute -bottom-8 -left-8 h-28 w-28 -rotate-6 rounded-doodle border-2 border-ink bg-mint" aria-hidden="true"></div>
+
+    <h2 class="relative font-display text-3xl font-extrabold text-ink sm:text-4xl">
+      ¿Tenés algo interesante para contar?
+    </h2>
+    <p class="relative mx-auto mt-3 max-w-md text-ink-soft">
+      Vení a charlar con nosotros.
+    </p>
+    <a
+      href={withBase("/participa")}
+      class="focus-ring relative mt-6 inline-block rounded-full border-2 border-ink bg-ink px-7 py-3 font-display font-bold text-paper shadow-doodle transition hover:-translate-y-0.5"
+    >
+      Postulate para participar
+    </a>
+  </div>
+</section>

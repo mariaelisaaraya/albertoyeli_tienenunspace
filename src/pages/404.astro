@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/url";
+---
+
+<BaseLayout title="Página no encontrada">
+  <section class="mx-auto flex max-w-xl flex-col items-center px-4 py-24 text-center sm:px-6">
+    <p class="font-display text-7xl font-extrabold text-sky-deep">404</p>
+    <h1 class="mt-4 font-display text-2xl font-bold text-ink">Esta página se perdió en el Space</h1>
+    <p class="mt-2 text-ink-soft">No encontramos lo que buscabas. Probá desde el archivo de episodios.</p>
+    <a
+      href={withBase("/")}
+      class="focus-ring mt-6 rounded-full border-2 border-ink bg-ink px-6 py-3 font-display font-bold text-paper shadow-doodle"
+    >
+      Volver al inicio
+    </a>
+  </section>
+</BaseLayout>

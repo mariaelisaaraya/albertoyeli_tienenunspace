@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import NextSpaceSection from "../components/NextSpaceSection.astro";
+import EpisodeCard from "../components/EpisodeCard.astro";
+import EmptyState from "../components/EmptyState.astro";
+import CTASection from "../components/CTASection.astro";
+import DriverCard from "../components/DriverCard.astro";
+import { hosts } from "../data/hosts";
+
+const allEpisodes = (await getCollection("episodes")).filter((e) => !e.data.draft);
+const latest = allEpisodes
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+---
+
+<BaseLayout title="AlbertoYEli">
+  <Hero />
+
+  <section class="mx-auto max-w-5xl px-4 py-4 sm:px-6">
+    <NextSpaceSection />
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="font-display text-3xl font-extrabold text-ink">Últimos episodios</h2>
+      <a href="/episodios" class="focus-ring hidden rounded font-bold text-ink hover:text-coral sm:block">
+        Ver todo el archivo →
+      </a>
+    </div>
+
+    {
+      latest.length === 0 ? (
+        <div class="mt-8">
+          <EmptyState
+            title="Todavía no publicamos episodios acá"
+            description="Ya grabamos varios Spaces — estamos preparando las transcripciones y resúmenes antes de subirlos. Volvé pronto."
+          />
+        </div>
+      ) : (
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {latest.map((episode) => <EpisodeCard episode={episode} />)}
+        </div>
+      )
+    }
+
+    <a href="/episodios" class="focus-ring mt-8 block text-center font-bold text-ink hover:text-coral sm:hidden">
+      Ver todo el archivo →
+    </a>
+  </section>
+
+  <CTASection />
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <h2 class="font-display text-3xl font-extrabold text-ink">Conducen</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      {hosts.map((host) => <DriverCard host={host} />)}
+    </div>
+  </section>
+</BaseLayout>
