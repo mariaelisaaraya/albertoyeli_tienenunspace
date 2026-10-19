@@ -15,12 +15,14 @@ function pad(n: number) {
 }
 
 function useCountdown(target: Date) {
-  const [remaining, setRemaining] = useState(() => target.getTime() - Date.now());
+  // Start at the same value on the server and browser, then sync the clock
+  // after hydration to keep the initial React markup identical.
+  const [remaining, setRemaining] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setRemaining(target.getTime() - Date.now());
-    }, 1000);
+    const tick = () => setRemaining(target.getTime() - Date.now());
+    tick();
+    const id = setInterval(tick, 1000);
     return () => clearInterval(id);
   }, [target]);
 
