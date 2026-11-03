@@ -45,6 +45,9 @@ const episodes = defineCollection({
        * largo de audio no disponible. Para casos donde el equipo ya adoptó
        * el título/contenido como definitivo pese a no tener audio propio. */
       minimalPresentation: z.boolean().default(false),
+      /** true = Space anunciado que todavía no ocurrió. Tiene página propia con
+       * la info del encuentro, pero no entra al archivo de publicados ni al RSS. */
+      upcoming: z.boolean().default(false),
       draft: z.boolean().default(false),
     }),
 });

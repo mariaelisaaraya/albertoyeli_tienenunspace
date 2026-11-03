@@ -5,6 +5,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ShareButtons from "../../components/ShareButtons.astro";
 import TranscriptViewer from "../../components/TranscriptViewer.tsx";
 import { withBase } from "../../lib/url";
+import { fromZonedTime } from "date-fns-tz";
+import { confirmedSpaces, DISPLAY_TIMEZONES, SHOW_TIMEZONE, WEEKLY_SCHEDULE } from "../../data/schedule";
+import { buildGoogleCalendarUrl } from "../../lib/calendar";
 
 export async function getStaticPaths() {
   const episodes = await getCollection("episodes", (e) => !e.data.draft);
@@ -30,6 +33,14 @@ const formattedDate = data.dateIsUnknown
       year: "numeric",
       timeZone: "UTC", // fecha de calendario pura, no un instante — no convertir de zona
     }).format(data.date);
+
+const isoDay = data.date.toISOString().slice(0, 10);
+const upcomingCalendarUrl = data.upcoming
+  ? buildGoogleCalendarUrl({
+      instant: fromZonedTime(`${isoDay}T${String(WEEKLY_SCHEDULE.hour).padStart(2, "0")}:${String(WEEKLY_SCHEDULE.minute).padStart(2, "0")}:00`, SHOW_TIMEZONE),
+      confirmed: confirmedSpaces.find((space) => space.date === isoDay),
+    })
+  : undefined;
 
 const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).toString();
 ---
@@ -64,6 +75,19 @@ const canonicalUrl = new URL(withBase(`/episodios/${episode.id}/`), Astro.site).
           {data.host && data.guests.length > 0 && " · "}
           {data.guests.length > 0 && <>Con {data.guests.join(", ")}</>}
         </p>
+      )
+    }
+
+    {
+      data.upcoming && (
+        <div class="sketch-border mt-5 border-2 border-ink bg-mint-soft px-5 py-4">
+          <p class="font-label text-xs font-bold uppercase tracking-widest text-ink">Próximo Space</p>
+          <p class="mt-1 text-ink-soft">
+            <span class="capitalize">{formattedDate}</span> · {DISPLAY_TIMEZONES.map((tz) => `${tz.time} ${tz.label}`).join(" / ")}
+          </p>
+          <p class="mt-1 text-sm text-ink-soft">Todavía no salió al aire. Después del Space sumamos el audio y lo que nos llevamos.</p>
+          <a href={upcomingCalendarUrl} target="_blank" rel="noopener noreferrer" class="focus-ring mt-3 inline-block rounded-full border-2 border-ink bg-mint px-5 py-2.5 font-display text-sm text-ink">Agendar en Google</a>
+        </div>
       )
     }
 

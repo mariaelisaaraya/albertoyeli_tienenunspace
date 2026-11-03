@@ -12,7 +12,7 @@ import Squiggle from "../components/Squiggle.astro";
 import { hosts } from "../data/hosts";
 import { withBase } from "../lib/url";
 
-const allEpisodes = (await getCollection("episodes")).filter((e) => !e.data.draft);
+const allEpisodes = (await getCollection("episodes")).filter((e) => !e.data.draft && !e.data.upcoming);
 const latest = allEpisodes
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 3);

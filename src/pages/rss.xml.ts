@@ -7,7 +7,7 @@ export const prerender = true;
 
 export const GET: APIRoute = async (context) => {
   const episodes = (await getCollection("episodes"))
-    .filter((e) => !e.data.draft)
+    .filter((e) => !e.data.draft && !e.data.upcoming)
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
   return rss({

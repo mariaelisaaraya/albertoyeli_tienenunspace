@@ -6,7 +6,7 @@ import EmptyState from "../../components/EmptyState.astro";
 import ArchiveNotices from "../../components/ArchiveNotices.astro";
 
 const allEpisodes = (await getCollection("episodes"))
-  .filter((e) => !e.data.draft)
+  .filter((e) => !e.data.draft && !e.data.upcoming)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 const summaries: EpisodeSummary[] = allEpisodes.map((e) => ({

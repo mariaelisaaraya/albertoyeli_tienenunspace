@@ -47,4 +47,8 @@ export const confirmedSpaces: ConfirmedSpace[] = [{
   date: "2026-10-30",
   title: "AlbertoYEli — ¿Juntos cara a cara?",
   description: "El 30 de octubre nos encontramos cara a cara en Lisboa.",
+}, {
+  date: "2026-11-06",
+  title: "AlbertoYEli — Episodio 006: Meridian desde adentro",
+  description: "Episodio 006: Meridian desde adentro, con las personas y comunidades que impulsaron Meridian en Lisboa.",
 }];
