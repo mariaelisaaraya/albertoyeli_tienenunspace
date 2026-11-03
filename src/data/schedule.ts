@@ -46,5 +46,5 @@ export interface ConfirmedSpace {
 export const confirmedSpaces: ConfirmedSpace[] = [{
   date: "2026-10-30",
   title: "AlbertoYEli — ¿Juntos cara a cara?",
-  description: "Nos reencontramos el 30 de octubre. ¿Juntos cara a cara? El formato presencial está por confirmar. Reservá la fecha.",
+  description: "El 30 de octubre nos encontramos cara a cara en Lisboa.",
 }];

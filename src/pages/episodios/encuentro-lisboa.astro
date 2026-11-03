@@ -1,0 +1,124 @@
+---
+/**
+ * Encuentro presencial de Eli y Alberto en Lisboa (30/10/2026).
+ * No es un episodio: no hubo Space ni audio, por eso vive fuera de la
+ * colección `episodes` y no tiene número. El episodio 006 sigue pendiente.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ShareButtons from "../../components/ShareButtons.astro";
+import { withBase } from "../../lib/url";
+
+const title = "¿Juntos cara a cara?";
+const description = "El 30 de octubre nos encontramos cara a cara en Lisboa.";
+const photo = "/images/encuentro-lisboa-2026-10-30.jpg";
+
+const formattedDate = new Intl.DateTimeFormat("es-AR", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+}).format(new Date("2026-10-30T00:00:00Z"));
+
+const highlights = [
+  "Los proyectos importan, pero las personas que los construyen importan todavía más.",
+  "Construir en un mismo ecosistema cambia cuando nos ponemos cara a cara.",
+  "Conectar comunidades abre puertas para que más personas construyan juntas.",
+];
+
+const topics = ["Encuentro", "Stellar", "Comunidad", "Lisboa"];
+
+const links = [
+  { label: "Lendara Shield (GitHub)", url: "https://github.com/Lendara-Org/lendara-shield" },
+  { label: "Trustless Work (GitHub)", url: "https://github.com/Trustless-Work" },
+  { label: "Buen Día Builders (GitHub)", url: "https://github.com/BuenDia-Builders" },
+];
+
+const canonicalUrl = new URL(withBase("/episodios/encuentro-lisboa/"), Astro.site).toString();
+---
+
+<BaseLayout title={title} description={description} ogImage={withBase(photo)} type="article">
+  <article class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+    <p class="font-label text-sm font-bold uppercase tracking-widest text-coral">
+      Sin episodio · <span class="capitalize">{formattedDate}</span>
+    </p>
+    <h1 class="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl">
+      <span aria-hidden="true">🗓️</span> {title}
+    </h1>
+    <p class="mt-3 text-ink-soft"><span aria-hidden="true">📍</span> Lisboa, Portugal.</p>
+
+    <figure class="mx-auto mt-6 max-w-md">
+      <img
+        src={withBase(photo)}
+        alt="Alberto y Eli abrazados y sonrientes, mostrando sus credenciales, frente a un fondo con logos de Stellar en Lisboa"
+        width="960"
+        height="1177"
+        class="h-auto w-full rounded-doodle border-2 border-ink"
+      />
+      <figcaption class="mt-2 text-center font-hand text-lg leading-snug text-ink-soft">Eli y Alberto en Lisboa, 30 de octubre de 2026.</figcaption>
+    </figure>
+
+    <div class="editorial-content mt-6 max-w-none text-ink-soft">
+      <h2>Qué pasó</h2>
+      <p>Nos veníamos encontrando en Spaces, en mensajes y en repositorios. Esta vez nos encontramos en Lisboa.</p>
+      <p>Esta entrada no es un episodio: no hubo Space ni grabación. Hubo algo que no entra en un Space, y por eso quisimos dejarlo acá, en el archivo, entre un viernes y otro.</p>
+
+      <h2>Lo que cada uno estaba construyendo</h2>
+      <p>Eli llegó construyendo Lendara Shield junto a un equipo hermoso: un producto pensado para resolver problemas reales y sumar infraestructura útil al ecosistema Stellar.</p>
+      <p>Lendara Shield es una capa de privacidad compatible con cumplimiento para Stellar. La idea se resume en una frase: hacer KYC una vez, pagar en privado y revelar solo lo necesario. Por ahora funciona en testnet.</p>
+      <p>Alberto estaba ahí como mentor de Trustless Work, acompañando a builders y trabajando codo a codo con todo su equipo. Trustless Work construye infraestructura de escrow sobre Stellar, para que plataformas y apps puedan crear y gestionar pagos en garantía sin tener que pelearse con los contratos inteligentes.</p>
+
+      <h2>Mulheres Builders</h2>
+      <p>En paralelo, Eli venía impulsando una comunidad de alrededor de 50 mujeres, por ahora llamada Mulheres Builders.</p>
+      <p>Nació para seguir conectándonos, compartir lo que sabemos, empujar proyectos y abrir nuevas oportunidades en Web3. Es la misma idea que mueve a Buen Día Builders: pasar de aprender a construir, y de construir solas a construir juntas.</p>
+
+      <h2>El puente con Stellar</h2>
+      <p>Y en el medio, el puente de siempre: Buen Día Builders y la gente que construye en Stellar. Conectar equipos, compartir experiencias y abrir puertas para que más personas puedan construir juntas.</p>
+      <p>Muchas de esas conexiones empiezan en un Space o en un repo. Algunas, como esta, terminan en una foto.</p>
+
+      <h2>Lo que nos llevamos</h2>
+      <p>Esta vez no hubo episodio. Hubo algo que no entra en un Space: vernos cara a cara. Porque los proyectos importan, pero las personas que los construyen, y lo que nace cuando se encuentran, importan todavía más.</p>
+    </div>
+
+    <div class="sketch-border mt-8 border-2 border-ink bg-sun-soft p-5">
+      <h2 class="font-display text-lg text-ink">Ideas destacadas</h2>
+      <ul class="mt-3 list-disc space-y-1.5 pl-5 text-ink-soft">
+        {highlights.map((h) => <li>{h}</li>)}
+      </ul>
+    </div>
+
+    <ul class="mt-6 flex flex-wrap gap-2">
+      {topics.map((topic, i) => (
+        <li class={`sticker border border-ink/30 px-3 py-1.5 font-label text-sm font-semibold text-ink-soft ${i % 2 === 0 ? "bg-sky-deep" : "bg-sun-soft"}`}>
+          {topic}
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-8">
+      <h2 class="font-display text-lg font-bold text-ink">Enlaces mencionados</h2>
+      <ul class="mt-2 space-y-1">
+        {links.map((link) => (
+          <li>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="focus-ring rounded font-medium text-ink underline decoration-coral decoration-2 underline-offset-4 hover:text-coral"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-8">
+      <ShareButtons title={title} url={canonicalUrl} />
+    </div>
+
+    <a href={withBase("/episodios/")} class="focus-ring mt-10 inline-block rounded font-display text-sm text-ink hover:text-coral">
+      ← Volver al archivo
+    </a>
+  </article>
+</BaseLayout>

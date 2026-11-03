@@ -67,10 +67,6 @@
     "en": "Add to Google Calendar",
     "pt": "Adicionar ao Google Agenda"
   },
-  "Nos reencontramos el 30 de octubre. ¿Juntos cara a cara? El formato presencial está por confirmar. Reservá la fecha.": {
-    "en": "We meet again on October 30. Together face to face? The in-person format is still to be confirmed. Save the date.",
-    "pt": "Nos reencontramos em 30 de outubro. Juntos cara a cara? O formato presencial ainda será confirmado. Reserve a data."
-  },
   "Últimos episodios": {
     "en": "Latest episodes",
     "pt": "Últimos episódios"
@@ -714,5 +710,113 @@
   "Agendar el 30 de octubre": {
     "en": "Save October 30",
     "pt": "Agendar para 30 de outubro"
+  },
+  "Lisboa, Portugal.": {
+    "en": "Lisbon, Portugal.",
+    "pt": "Lisboa, Portugal."
+  },
+  "Nos veníamos encontrando en Spaces, en mensajes y en repositorios. Esta vez nos encontramos en Lisboa.": {
+    "en": "We kept running into each other in Spaces, in messages and in repositories. This time, we ran into each other in Lisbon.",
+    "pt": "A gente vinha se encontrando em Spaces, em mensagens e em repositórios. Desta vez, nos encontramos em Lisboa."
+  },
+  "Y en el medio, el puente de siempre: Buen Día Builders y la gente que construye en Stellar. Conectar equipos, compartir experiencias y abrir puertas para que más personas puedan construir juntas.": {
+    "en": "And in between, the usual bridge: Buen Día Builders and the people building on Stellar. Connecting teams, sharing experiences and opening doors so more people can build together.",
+    "pt": "E no meio, a ponte de sempre: Buen Día Builders e as pessoas que constroem na Stellar. Conectar equipes, compartilhar experiências e abrir portas para que mais pessoas possam construir juntas."
+  },
+  "Esta vez no hubo episodio. Hubo algo que no entra en un Space: vernos cara a cara. Porque los proyectos importan, pero las personas que los construyen, y lo que nace cuando se encuentran, importan todavía más.": {
+    "en": "There was no episode this time. There was something that doesn't fit in a Space: seeing each other face to face. Because projects matter, but the people who build them, and what is born when they meet, matter even more.",
+    "pt": "Desta vez não teve episódio. Teve algo que não cabe num Space: nos ver cara a cara. Porque os projetos importam, mas as pessoas que os constroem, e o que nasce quando elas se encontram, importam ainda mais."
+  },
+  "Eli y Alberto en Lisboa, 30 de octubre de 2026.": {
+    "en": "Eli and Alberto in Lisbon, October 30, 2026.",
+    "pt": "Eli e Alberto em Lisboa, 30 de outubro de 2026."
+  },
+  "Alberto y Eli abrazados y sonrientes, mostrando sus credenciales, frente a un fondo con logos de Stellar en Lisboa": {
+    "en": "Alberto and Eli hugging and smiling, holding up their badges, in front of a backdrop with Stellar logos in Lisbon",
+    "pt": "Alberto e Eli abraçados e sorridentes, mostrando suas credenciais, diante de um painel com logos da Stellar em Lisboa"
+  },
+  "El 30 de octubre nos encontramos cara a cara en Lisboa.": {
+    "en": "On October 30 we met face to face in Lisbon.",
+    "pt": "Em 30 de outubro nos encontramos cara a cara em Lisboa."
+  },
+  "Sin episodio ·": {
+    "en": "No episode ·",
+    "pt": "Sem episódio ·"
+  },
+  "Qué pasó": {
+    "en": "What happened",
+    "pt": "O que aconteceu"
+  },
+  "Esta entrada no es un episodio: no hubo Space ni grabación. Hubo algo que no entra en un Space, y por eso quisimos dejarlo acá, en el archivo, entre un viernes y otro.": {
+    "en": "This entry is not an episode: there was no Space and no recording. There was something that doesn't fit in a Space, and that's why we wanted to keep it here, in the archive, between one Friday and the next.",
+    "pt": "Esta entrada não é um episódio: não teve Space nem gravação. Teve algo que não cabe num Space, e por isso quisemos deixá-lo aqui, no arquivo, entre uma sexta e outra."
+  },
+  "Lo que cada uno estaba construyendo": {
+    "en": "What each of us was building",
+    "pt": "O que cada um estava construindo"
+  },
+  "Eli llegó construyendo Lendara Shield junto a un equipo hermoso: un producto pensado para resolver problemas reales y sumar infraestructura útil al ecosistema Stellar.": {
+    "en": "Eli arrived building Lendara Shield with a wonderful team: a product designed to solve real problems and add useful infrastructure to the Stellar ecosystem.",
+    "pt": "Eli chegou construindo o Lendara Shield com uma equipe linda: um produto pensado para resolver problemas reais e somar infraestrutura útil ao ecossistema Stellar."
+  },
+  "Lendara Shield es una capa de privacidad compatible con cumplimiento para Stellar. La idea se resume en una frase: hacer KYC una vez, pagar en privado y revelar solo lo necesario. Por ahora funciona en testnet.": {
+    "en": "Lendara Shield is a compliance-friendly privacy layer for Stellar. The idea fits in one line: KYC once, pay privately, disclose only what's needed. For now it runs on testnet.",
+    "pt": "Lendara Shield é uma camada de privacidade compatível com compliance para a Stellar. A ideia cabe numa frase: fazer KYC uma vez, pagar com privacidade e revelar só o necessário. Por enquanto funciona em testnet."
+  },
+  "Alberto estaba ahí como mentor de Trustless Work, acompañando a builders y trabajando codo a codo con todo su equipo. Trustless Work construye infraestructura de escrow sobre Stellar, para que plataformas y apps puedan crear y gestionar pagos en garantía sin tener que pelearse con los contratos inteligentes.": {
+    "en": "Alberto was there as a Trustless Work mentor, supporting builders and working side by side with his whole team. Trustless Work builds escrow infrastructure on Stellar, so platforms and apps can create and manage escrow payments without wrestling with smart contracts.",
+    "pt": "Alberto estava lá como mentor da Trustless Work, acompanhando builders e trabalhando lado a lado com toda a sua equipe. A Trustless Work constrói infraestrutura de escrow na Stellar, para que plataformas e apps possam criar e gerenciar pagamentos em garantia sem brigar com os contratos inteligentes."
+  },
+  "En paralelo, Eli venía impulsando una comunidad de alrededor de 50 mujeres, por ahora llamada Mulheres Builders.": {
+    "en": "Meanwhile, Eli had been growing a community of around 50 women, for now called Mulheres Builders.",
+    "pt": "Em paralelo, Eli vinha impulsionando uma comunidade de cerca de 50 mulheres, por enquanto chamada Mulheres Builders."
+  },
+  "Nació para seguir conectándonos, compartir lo que sabemos, empujar proyectos y abrir nuevas oportunidades en Web3. Es la misma idea que mueve a Buen Día Builders: pasar de aprender a construir, y de construir solas a construir juntas.": {
+    "en": "It was born to keep us connected, share what we know, push projects forward and open new opportunities in Web3. It's the same idea behind Buen Día Builders: going from learning to building, and from building alone to building together.",
+    "pt": "Ela nasceu para continuar nos conectando, compartilhar o que sabemos, impulsionar projetos e abrir novas oportunidades na Web3. É a mesma ideia que move a Buen Día Builders: passar de aprender a construir, e de construir sozinhas a construir juntas."
+  },
+  "El puente con Stellar": {
+    "en": "The bridge to Stellar",
+    "pt": "A ponte com a Stellar"
+  },
+  "Muchas de esas conexiones empiezan en un Space o en un repo. Algunas, como esta, terminan en una foto.": {
+    "en": "Many of those connections start in a Space or in a repo. Some, like this one, end up in a photo.",
+    "pt": "Muitas dessas conexões começam num Space ou num repo. Algumas, como esta, terminam numa foto."
+  },
+  "Lo que nos llevamos": {
+    "en": "What we take with us",
+    "pt": "O que levamos"
+  },
+  "Los proyectos importan, pero las personas que los construyen importan todavía más.": {
+    "en": "Projects matter, but the people who build them matter even more.",
+    "pt": "Os projetos importam, mas as pessoas que os constroem importam ainda mais."
+  },
+  "Construir en un mismo ecosistema cambia cuando nos ponemos cara a cara.": {
+    "en": "Building in the same ecosystem changes when we meet face to face.",
+    "pt": "Construir no mesmo ecossistema muda quando nos vemos cara a cara."
+  },
+  "Conectar comunidades abre puertas para que más personas construyan juntas.": {
+    "en": "Connecting communities opens doors so more people can build together.",
+    "pt": "Conectar comunidades abre portas para que mais pessoas construam juntas."
+  },
+  "Encuentro": {
+    "en": "Meetup",
+    "pt": "Encontro"
+  },
+  "Lisboa": {
+    "en": "Lisbon",
+    "pt": "Lisboa"
+  },
+  "← Volver al archivo": {
+    "en": "← Back to the archive",
+    "pt": "← Voltar ao arquivo"
+  },
+  "No hubo Space: hubo encuentro. Eli llegó construyendo Lendara Shield, Alberto estaba como mentor de Trustless Work, y en el medio, Mulheres Builders y Buen Día Builders conectando gente que construye en Stellar.": {
+    "en": "No Space this time: we met in person. Eli arrived building Lendara Shield, Alberto was there as a Trustless Work mentor, and in between, Mulheres Builders and Buen Día Builders connecting people who build on Stellar.",
+    "pt": "Não teve Space: teve encontro. Eli chegou construindo o Lendara Shield, Alberto estava como mentor da Trustless Work e, no meio, Mulheres Builders e Buen Día Builders conectando pessoas que constroem na Stellar."
+  },
+  "Leer la historia →": {
+    "en": "Read the story →",
+    "pt": "Ler a história →"
   }
 }

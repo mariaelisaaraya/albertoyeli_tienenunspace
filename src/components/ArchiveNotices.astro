@@ -1,32 +1,76 @@
 ---
-import { fromZonedTime } from "date-fns-tz";
-import { confirmedSpaces, SHOW_TIMEZONE } from "../data/schedule";
-import { buildGoogleCalendarUrl } from "../lib/calendar";
+import { withBase } from "../lib/url";
 
-const calendarUrl = buildGoogleCalendarUrl({
-  instant: fromZonedTime("2026-10-30T13:00:00", SHOW_TIMEZONE),
-  confirmed: confirmedSpaces.find((space) => space.date === "2026-10-30"),
-});
 const formatDate = (date: string) =>
   new Intl.DateTimeFormat("es-AR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })
     .format(new Date(`${date}T00:00:00Z`));
-const notices = [
-  { date: "2026-10-30", label: "006", icon: "🗓️", title: "¿Juntos cara a cara?", text: "Volvemos el 30/10. Puede ser, puede no ser… El cara a cara está por confirmar. ¡Guardá la fecha!", upcoming: true },
-  { date: "2026-10-23", label: "S/E", icon: "✈️", title: "Alberto estuvo en Lisboa", text: "Sin episodio esta semana.", upcoming: false },
-  { date: "2026-10-16", label: "S/E", icon: "🍁", title: "Alberto estuvo en Canadá", text: "Sin episodio esta semana.", upcoming: false },
+
+interface Notice {
+  date: string;
+  label: string;
+  icon: string;
+  title: string;
+  text: string;
+  location?: string;
+  /** Ruta interna (sin base) a la página con la historia completa. */
+  href?: string;
+  /** Miniatura; ruta dentro de public/. */
+  photo?: { src: string; width: number; height: number };
+}
+
+const notices: Notice[] = [
+  {
+    date: "2026-10-30",
+    label: "S/E",
+    icon: "🗓️",
+    title: "¿Juntos cara a cara?",
+    location: "Lisboa, Portugal.",
+    text: "No hubo Space: hubo encuentro. Eli llegó construyendo Lendara Shield, Alberto estaba como mentor de Trustless Work, y en el medio, Mulheres Builders y Buen Día Builders conectando gente que construye en Stellar.",
+    href: "/episodios/encuentro-lisboa/",
+    photo: {
+      src: "/images/encuentro-lisboa-2026-10-30.jpg",
+      width: 960,
+      height: 1177,
+    },
+  },
+  { date: "2026-10-23", label: "S/E", icon: "✈️", title: "Alberto estuvo en Lisboa", text: "Sin episodio esta semana." },
+  { date: "2026-10-16", label: "S/E", icon: "🍁", title: "Alberto estuvo en Canadá", text: "Sin episodio esta semana." },
 ];
 ---
 
 <ul class="mt-8">
   {notices.map((notice) => (
     <li class="flex flex-col gap-4 border-b-2 border-dashed border-ink/20 py-8 sm:flex-row sm:items-start">
-      <span class="shrink-0 font-display text-[3.5rem] leading-none text-ink/20 sm:w-36" aria-label={notice.upcoming ? "Próximo episodio 6" : "Sin episodio"}>{notice.label}</span>
-      <div class="min-w-0 flex-1">
-        <time datetime={notice.date} class="font-label text-xs font-bold tracking-widest text-coral">{formatDate(notice.date)}</time>
-        <h2 class="mt-2 font-display text-2xl text-ink"><span aria-hidden="true">{notice.icon}</span> {notice.title}</h2>
-        <p class="mt-3 text-ink-soft">{notice.text}</p>
-        {notice.upcoming && (
-          <a href={calendarUrl} target="_blank" rel="noopener noreferrer" class="focus-ring mt-4 inline-block rounded-full border-2 border-ink bg-mint px-5 py-2.5 font-display text-sm text-ink">Agendar el 30 de octubre</a>
+      <span class="shrink-0 font-display text-[3.5rem] leading-none text-ink/20 sm:w-36" aria-label="Sin episodio">{notice.label}</span>
+      <div class="flex min-w-0 flex-1 items-start gap-4">
+        <div class="min-w-0 flex-1">
+          <time datetime={notice.date} class="font-label text-xs font-bold tracking-widest text-coral">{formatDate(notice.date)}</time>
+          <h2 class="mt-2 font-display text-2xl text-ink">
+            <span aria-hidden="true">{notice.icon}</span>{" "}
+            {notice.href ? (
+              <a href={withBase(notice.href)} class="focus-ring rounded hover:text-coral">{notice.title}</a>
+            ) : notice.title}
+          </h2>
+          {notice.location && (
+            <p class="mt-1 font-label text-xs font-bold uppercase tracking-widest text-ink/50"><span aria-hidden="true">📍</span> {notice.location}</p>
+          )}
+          <p class="mt-3 max-w-2xl text-ink-soft">{notice.text}</p>
+          {notice.href && (
+            <a href={withBase(notice.href)} class="focus-ring mt-4 inline-flex items-center gap-1 rounded font-display text-xs text-ink hover:text-coral">Leer la historia →</a>
+          )}
+        </div>
+        {notice.photo && (
+          <a href={notice.href ? withBase(notice.href) : undefined} class="focus-ring shrink-0 rounded-xl" tabindex="-1" aria-hidden="true">
+            <img
+              src={withBase(notice.photo.src)}
+              alt=""
+              width={notice.photo.width}
+              height={notice.photo.height}
+              loading="lazy"
+              decoding="async"
+              class="h-24 w-20 rotate-1 rounded-xl border-2 border-ink object-cover object-top sm:h-32 sm:w-28"
+            />
+          </a>
         )}
       </div>
     </li>
