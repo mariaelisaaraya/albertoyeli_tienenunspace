@@ -43,6 +43,6 @@ Este viernes queremos contar la otra parte: la de las personas y comunidades que
 - **H.E.R. DAO** (@_herdao). Una DAO de desarrolladoras impulsada por mujeres y abierta a personas no binarias. Fue una de las comunidades aliadas de HackMeridian en el camino a Lisboa.
 - **H.E.R. DAO Spain** (@herdaospain). El capítulo de H.E.R. DAO con base en Madrid: una comunidad que impulsa la inclusión y el liderazgo femenino en blockchain.
 - **Tomketal** (@Tomketal). Fundador y Vibes Curator de CryptoDays, una comunidad Web3 + IA que arma eventos presenciales. CryptoDays también fue comunidad aliada de HackMeridian.
-- **el3esrojo** (@el3esrojo). Full stack engineer con pasión por las hackathons. Su camino en blockchain pasó por la primera cohorte de Ripple x H.E.R. DAO.
+- **el3esrojo** (@el3esrojo). Full Stack Engineer, apasionada por el aprendizaje continuo y las conexiones reales. Su camino en blockchain pasó por la primera cohorte de Ripple x H.E.R. DAO.
 - **Trustless Work**. Infraestructura de escrow sobre Stellar y partner de HackMeridian. El equipo de Alberto.
 - **Buen Día Builders**. Un ecosistema de builders de Latinoamérica que forma y acompaña a mujeres en Web3. La casa de Eli.
